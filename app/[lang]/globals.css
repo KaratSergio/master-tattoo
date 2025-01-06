@@ -3,38 +3,31 @@
 @tailwind utilities;
 
 :root {
-    --background: #ffffff;
-    --foreground: #0d3352;
-    --font-inter: 'Inter', sans-serif;
-    --font-roboto: 'Roboto', sans-serif;
+    --main-bg-color: #ffffff;
+    --main-text-color: #333333;
+    --font-montserrat: 'Montserrat', sans-serif;
     --font-roboto_mono: 'Roboto Mono', monospace;
-    --font-lato: 'Lato', sans-serif;
-}
-
-body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: var(--font-inter);
+    --font-roboto: 'Roboto', sans-serif;
 }
 
 html,
 body {
+    color: var(--main-text-color);
+    background: var(--main-bg-color);
+    font-family: var(--font-montserrat);
     height: 100%;
     font-weight: 400;
     line-height: 1;
-}
-body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    background-color: white;
 }
 
 section {
     scroll-margin-top: 60px;
 }
 
-.hover-nav {
+/* .hover-nav {
     position: relative;
     display: inline-block;
 }
@@ -101,7 +94,7 @@ section {
 
 .custom-blur {
     backdrop-filter: blur(8px);
-}
+} */
 
 /* .hero-bg {
     background: url('../../public/hero/bg.webp') center bottom / cover no-repeat;

@@ -8,29 +8,29 @@ export default {
     ],
     theme: {
         screens: {
-            xs: '375px',
+            xs: '320px',
             sm: '480px',
-            md: '834px',
             xl: '1440px',
+            '2xl': '1920px',
         },
         extend: {
             fontFamily: {
-                inter: ['Inter', 'sans-serif'],
+                montserrat: ['Montserrat', 'sans-serif'],
                 roboto: ['var(--font-roboto)', 'sans-serif'],
                 robotoMono: ['var(--font-roboto_mono)', 'monospace'],
-                lato: ['var(--font-lato)', 'sans-serif'],
             },
             container: {
                 center: true,
                 padding: {
                     DEFAULT: '20px',
                     sm: '20px',
-                    md: '40px',
-                    xl: '78px',
+                    xl: '70px',
+                    '2xl': '135px',
                 },
             },
             colors: {
-                blue_dark: '#0D3352',
+                dark: '#3C444C',
+
                 blue: '#1686AE',
                 blue_alfa: '#1B324980',
                 blue_light: '#1FACE4',

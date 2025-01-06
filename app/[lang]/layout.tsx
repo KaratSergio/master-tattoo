@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, Roboto_Mono } from 'next/font/google';
+import { Montserrat, Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import { Locale } from '@/i18n.config';
 import { getClient } from '@/utils/apollo-client';
 import { gql } from '@apollo/client';
-// import Header from '@/page-components/Header';
-// import Footer from '@/page-components/Footer';
+import Header from '@/page-components/Header';
+import Footer from '@/page-components/Footer';
 
 export async function generateMetadata({
     params,
@@ -88,7 +88,7 @@ export async function generateMetadata({
     };
 }
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const montserrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 
 const roboto_mono = Roboto_Mono({
     subsets: ['latin', 'cyrillic'],
@@ -106,9 +106,39 @@ export default async function RootLayout({
 }>) {
     const { lang } = await params;
 
+    const query = gql`
+        query MainPage($locale: SiteLocale!) {
+            navMenu(locale: $locale) {
+                logo {
+                    alt
+                    url
+                }
+                pages {
+                    id
+                    title
+                    url
+                }
+            }
+        }
+    `;
+
+    const { data } = await getClient().query({
+        query,
+        variables: { locale: lang },
+        context: {
+            fetchOptions: {
+                next: { revalidate: 60 },
+            },
+        },
+    });
+
     return (
         <html lang={lang} className="h-full">
-            <body className={`${inter.className} ${roboto_mono.variable}`}>{children}</body>
+            <body className={`${montserrat.className} ${roboto_mono.variable}`}>
+                <Header data={data.navMenu} lang={lang} />
+                {children}
+                <Footer />
+            </body>
         </html>
     );
 }

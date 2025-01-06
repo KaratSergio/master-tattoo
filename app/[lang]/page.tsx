@@ -40,7 +40,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
     });
 
     return (
-        <main className="flex flex-col flex-grow  justify-between">
+        <main className="flex flex-col flex-grow justify-between">
             <HeroSection data={data.heroSection} />
         </main>
     );
