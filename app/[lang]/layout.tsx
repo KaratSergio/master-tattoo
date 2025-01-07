@@ -113,6 +113,7 @@ export default async function RootLayout({
                     alt
                     url
                 }
+                authorName
                 pages {
                     id
                     title

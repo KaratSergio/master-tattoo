@@ -3,6 +3,9 @@ import { getClient } from '@/utils/apollo-client';
 import { gql } from '@apollo/client';
 
 import HeroSection from '@/page-components/HeroSection';
+import AboutSection from '@/page-components/AboutSection';
+import DiscountSection from '@/page-components/DiscountSection';
+import ServicesSection from '@/page-components/ServicesSection';
 
 export default async function Home({ params }: { params: { lang: Locale } }) {
     const { lang } = await params;
@@ -26,6 +29,40 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                     }
                 }
             }
+            aboutSection(locale: uk) {
+                title
+                text
+                list
+                image1 {
+                    alt
+                    url
+                }
+                image2 {
+                    alt
+                    url
+                }
+            }
+            discountSection(locale: uk) {
+                title
+                text
+                text1
+                button
+            }
+            servicesSection(locale: uk) {
+                serviceCard {
+                    id
+                    price
+                    text
+                    title
+                    image {
+                        alt
+                        url
+                        width
+                        height
+                    }
+                    button
+                }
+            }
         }
     `;
 
@@ -40,8 +77,11 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
     });
 
     return (
-        <main className="flex flex-col flex-grow justify-between">
+        <main className="flex flex-col flex-grow items-center justify-between">
             <HeroSection data={data.heroSection} />
+            <AboutSection data={data.aboutSection} />
+            <DiscountSection data={data.discountSection} />
+            <ServicesSection data={data.servicesSection} />
         </main>
     );
 }

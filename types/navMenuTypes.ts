@@ -13,6 +13,7 @@ interface NavMenu {
 
 export interface NavMenuData {
     logo: Logotype;
+    authorName: string;
     pages: NavMenu[];
 }
 

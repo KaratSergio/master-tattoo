@@ -9,7 +9,7 @@ interface Advantage {
     image: Image;
 }
 
-export interface HeroSectionData {
+interface HeroSectionData {
     text: string;
     title: string;
     heroImage: Image;

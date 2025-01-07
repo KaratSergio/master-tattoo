@@ -3,18 +3,14 @@ export const Burger = ({ className }: { className: string }) => {
         <svg
             className={className}
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
+            width="25"
+            height="18"
+            viewBox="0 0 25 18"
             fill="none"
         >
-            <path
-                d="M1 6H31M1 16H31M1 26H31"
-                stroke="#0D3352"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
+            <rect x="0.078125" y="0.0726166" width="24.8462" height="2.48869" fill="#2E2C3B" />
+            <rect x="0.078125" y="7.53871" width="24.8462" height="2.4887" fill="#2E2C3B" />
+            <rect x="0.078125" y="15.0048" width="24.8462" height="2.4887" fill="#2E2C3B" />
         </svg>
     );
 };
