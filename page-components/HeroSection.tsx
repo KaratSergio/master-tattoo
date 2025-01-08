@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import { Button } from '@/components/Button';
 import { HeroSectionProps } from '@/types/heroSectionTypes';
 
 const HeroSection: FC<HeroSectionProps> = ({ data }) => {
@@ -29,9 +30,7 @@ const HeroSection: FC<HeroSectionProps> = ({ data }) => {
                         </li>
                     ))}
                 </ul>
-                <button className="mt-[50px] py-[15px] pl-[42px] pr-[17px] text-[15px] low-box-shadow rounded-[10px] font-bold leading-5 text-white uppercase bg-a_gradient">
-                    {data.button}
-                </button>
+                <Button className="mt-[50px]">{data.button}</Button>
             </div>
         </section>
     );
