@@ -9,6 +9,11 @@ import ServicesSection from '@/page-components/ServicesSection';
 import WorkSection from '@/page-components/WorkSection';
 import ToolsSection from '@/page-components/ToolsSection';
 import GallerySection from '@/page-components/GallerySection';
+import PromotionSection from '@/page-components/PromotionSection';
+import ReviewsSection from '@/page-components/ReviewsSection';
+import ProfileSection from '@/page-components/ProfileSection';
+import SubscribeSection from '@/page-components/SubscribeSection';
+import ContactsSection from '@/page-components/ContactsSection';
 
 export default async function Home({ params }: { params: { lang: Locale } }) {
     const { lang } = await params;
@@ -107,6 +112,72 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                     url
                 }
             }
+            promotionSection(locale: uk) {
+                agreement
+                button
+                buttonError
+                name
+                phone
+                text
+                text1
+                title
+                image {
+                    alt
+                    url
+                }
+            }
+            reviewsSection(locale: uk) {
+                title
+                text
+                reviewsList {
+                    id
+                    title
+                    text
+                    image {
+                        alt
+                        url
+                    }
+                }
+            }
+            profileSection(locale: uk) {
+                title
+                text
+                button
+                image {
+                    alt
+                    url
+                }
+                certificate {
+                    id
+                    text
+                    image {
+                        alt
+                        url
+                    }
+                }
+            }
+            subscribeSection(locale: uk) {
+                title
+                text
+                button1
+                button2
+                image {
+                    alt
+                    url
+                }
+            }
+            contactsSection(locale: uk) {
+                title
+                telephone
+                operating
+                address
+                email
+                social
+                image {
+                    alt
+                    url
+                }
+            }
         }
     `;
 
@@ -129,6 +200,11 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
             <WorkSection data={data.workSection} />
             <ToolsSection data={data.toolsSection} />
             <GallerySection data={data.gallerySection} />
+            <PromotionSection data={data.promotionSection} />
+            <ReviewsSection data={data.reviewsSection} />
+            <ProfileSection data={data.profileSection} />
+            <SubscribeSection data={data.subscribeSection} />
+            <ContactsSection data={data.contactsSection} />
         </main>
     );
 }

@@ -120,6 +120,23 @@ export default async function RootLayout({
                     url
                 }
             }
+            footer(locale: uk) {
+                nameAuthor
+                button
+                phone
+                profession
+                text1
+                text2
+                text3
+                logo {
+                    alt
+                    url
+                }
+                social {
+                    id
+                    url
+                }
+            }
         }
     `;
 
@@ -138,7 +155,7 @@ export default async function RootLayout({
             <body className={`${montserrat.className} ${roboto_mono.variable}`}>
                 <Header data={data.navMenu} lang={lang} />
                 {children}
-                <Footer />
+                <Footer data={data.footer} />
             </body>
         </html>
     );
