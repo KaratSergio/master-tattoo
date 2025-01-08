@@ -6,6 +6,9 @@ import HeroSection from '@/page-components/HeroSection';
 import AboutSection from '@/page-components/AboutSection';
 import DiscountSection from '@/page-components/DiscountSection';
 import ServicesSection from '@/page-components/ServicesSection';
+import WorkSection from '@/page-components/WorkSection';
+import ToolsSection from '@/page-components/ToolsSection';
+import GallerySection from '@/page-components/GallerySection';
 
 export default async function Home({ params }: { params: { lang: Locale } }) {
     const { lang } = await params;
@@ -63,6 +66,47 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                     button
                 }
             }
+            workSection(locale: uk) {
+                button
+                title
+                titleStage
+                image {
+                    alt
+                    url
+                }
+                workStage {
+                    id
+                    text
+                    title
+                    titleList
+                }
+                workList {
+                    id
+                    text
+                    title
+                }
+            }
+            toolsSection(locale: uk) {
+                title
+                tools {
+                    id
+                    title
+                    text
+                    image {
+                        alt
+                        url
+                    }
+                }
+            }
+            gallerySection(locale: uk) {
+                title
+                text
+                gallery {
+                    alt
+                    id
+                    url
+                }
+            }
         }
     `;
 
@@ -82,6 +126,9 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
             <AboutSection data={data.aboutSection} />
             <DiscountSection data={data.discountSection} />
             <ServicesSection data={data.servicesSection} />
+            <WorkSection data={data.workSection} />
+            <ToolsSection data={data.toolsSection} />
+            <GallerySection data={data.gallerySection} />
         </main>
     );
 }
