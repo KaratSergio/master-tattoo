@@ -17,7 +17,7 @@ interface FooterData {
     text2: string;
     text3: string;
     logo: Image;
-    social: SocialList;
+    social: SocialList[];
 }
 
 export interface FooterProps {

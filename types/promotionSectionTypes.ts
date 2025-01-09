@@ -6,7 +6,7 @@ interface Image {
 interface PromotionSectionData {
     title: string;
     text: string;
-    tex1: string;
+    text1: string;
     button: string;
     buttonError: string;
     image: Image;

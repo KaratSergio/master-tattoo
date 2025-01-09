@@ -14,7 +14,7 @@ interface ProfileSectionData {
     text: string;
     button: string;
     image: Image;
-    reviewsList: CertificateList;
+    certificate: CertificateList[];
 }
 
 export interface ProfileSectionProps {

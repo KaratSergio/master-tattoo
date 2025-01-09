@@ -13,7 +13,7 @@ interface ReviewsList {
 interface ReviewsSectionData {
     title: string;
     text: string;
-    reviewsList: ReviewsList;
+    reviewsList: ReviewsList[];
 }
 
 export interface ReviewsSectionProps {
