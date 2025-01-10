@@ -69,6 +69,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                         height
                     }
                     button
+                    title
                 }
             }
             workSection(locale: uk) {

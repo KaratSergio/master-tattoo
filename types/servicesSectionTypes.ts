@@ -15,6 +15,7 @@ interface ServiceCard {
 }
 
 interface ServicesSectionData {
+    title: string;
     serviceCard: ServiceCard[];
 }
 

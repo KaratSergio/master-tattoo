@@ -3,6 +3,10 @@ import Image from 'next/image';
 import { Markdown } from '@/components/Markdown';
 import { AboutSectionProps } from '@/types/aboutSectionTypes';
 
+import { Before } from '@/components/icons/Before';
+import { After } from '@/components/icons/After';
+import { Arrows } from '@/components/icons/arrows/Arrows';
+
 const AboutSection: FC<AboutSectionProps> = ({ data }) => {
     return (
         <section>
@@ -10,7 +14,7 @@ const AboutSection: FC<AboutSectionProps> = ({ data }) => {
                 <h2 className="mt-[82px] text-25px font-bold leading-8">{data.title}</h2>
                 <p className="mt-5 text-15px leading-22px">{data.text}</p>
                 <div className="mt-[30px] mb-8 flex items-center justify-center">
-                    <div className="w-full max-w-[179px]">
+                    <div className="relative">
                         <Image
                             src={data.image1.url}
                             alt={data.image1.alt}
@@ -18,10 +22,11 @@ const AboutSection: FC<AboutSectionProps> = ({ data }) => {
                             height={337}
                             quality={90}
                             sizes="337px"
-                            className="h-auto object-cover"
+                            className="object-cover"
                         />
+                        <Before className="absolute top-4 left-0" />
                     </div>
-                    <div className="w-full max-w-[193px]">
+                    <div className="ml-[2px] relative">
                         <Image
                             src={data.image2.url}
                             alt={data.image2.alt}
@@ -29,11 +34,16 @@ const AboutSection: FC<AboutSectionProps> = ({ data }) => {
                             height={337}
                             quality={90}
                             sizes="337px"
-                            className="h-auto object-cover"
+                            className="object-cover"
                         />
+                        <Arrows className="absolute top-32 left-[-14px]" />
+                        <After className="absolute bottom-4 right-0" />
                     </div>
                 </div>
-                <Markdown className="mt-[15px]" text={data.list} />
+                <Markdown
+                    className="mt-[15px] w-[310px] font-medium leading-25px"
+                    text={data.list}
+                />
             </div>
         </section>
     );

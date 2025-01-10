@@ -38,6 +38,7 @@ export default {
             lineHeight: {
                 '10px': '10px',
                 '22px': '22px',
+                '25px': '25px',
             },
             fontSize: {
                 '15px': '15px',

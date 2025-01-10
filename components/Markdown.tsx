@@ -9,6 +9,8 @@ import { H3 } from './typography/H3';
 import { TextColor, TextType } from '@/types/textTypes';
 import { H4 } from './typography/H4';
 
+import { Ellipse } from '@/components/icons/Ellipse';
+
 interface InterfaceMarkdown {
     text: string;
     className?: string;
@@ -45,9 +47,10 @@ export const Markdown: FC<InterfaceMarkdown> = ({
                     <li
                         className={cn(
                             className,
-                            'relative mt-2 pl-2 before:content-[""] before:absolute before:left-[-2px] before:top-3 before:-translate-y-1/2 before:size-1  before:rounded-full before:bg-black text-[15px] xl:text-base'
+                            'relative mt-2 pl-[30px] before:content-[""] before:absolute before:left-1 before:top-3 before:-translate-y-1/2 before:size-1  before:rounded-full before:bg-black'
                         )}
                     >
+                        <Ellipse className="absolute top-[6px] left-0" />
                         {props.children}
                     </li>
                 ),
