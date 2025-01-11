@@ -57,6 +57,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                 button
             }
             servicesSection(locale: uk) {
+                title
                 serviceCard {
                     id
                     price
@@ -69,7 +70,6 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                         height
                     }
                     button
-                    title
                 }
             }
             workSection(locale: uk) {
