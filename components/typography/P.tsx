@@ -16,7 +16,7 @@ export const P = ({
         <p
             className={cn(
                 {
-                    'text-regularTextSm xl:text-regularTextXl': type === 'regular',
+                    'text-[15px] leading-22px': type === 'regular',
                     'text-subtitleTextSm xl:text-subtitleTextXl': type === 'subtitle',
                     'text-subtitleTextBoldSm xl:text-subtitleTextBoldXl': type === 'subtitleBold',
                     'text-black2': color === 'dark',

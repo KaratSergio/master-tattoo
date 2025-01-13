@@ -5,6 +5,7 @@ interface Image {
 
 interface WorkList {
     id: string;
+    number: string;
     title: string;
     text: string;
 }

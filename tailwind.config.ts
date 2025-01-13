@@ -42,6 +42,7 @@ export default {
             },
             fontSize: {
                 '15px': '15px',
+                '20px': '20px',
                 '25px': '25px',
             },
             letterSpacing: {

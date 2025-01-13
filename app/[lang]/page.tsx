@@ -41,6 +41,8 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                 title
                 text
                 list
+                before
+                after
                 image1 {
                     alt
                     url
@@ -90,6 +92,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                     id
                     text
                     title
+                    number
                 }
             }
             toolsSection(locale: uk) {

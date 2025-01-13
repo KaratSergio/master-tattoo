@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import { H2 } from '@/components/typography/H2';
 import { ToolsSectionProps } from '@/types/toolsSectionTypes';
 
 const ToolsSection: FC<ToolsSectionProps> = ({ data }) => {
     return (
         <section>
-            <div className="container">
-                <h2>{data.title}</h2>
+            <div className="container mt-[60px]">
+                <H2 variant="title-section">{data.title}</H2>
                 <ul>
                     {data.tools.map(tool => (
                         <li key={tool.id}>

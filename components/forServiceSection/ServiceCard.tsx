@@ -28,7 +28,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ card, index }) => {
     return (
         <li
             key={card.id}
-            className="flex flex-col bg-gray-400 rounded-[15px] w-full max-w-[333px] px-5 py-10"
+            className="flex flex-col low-box-shadow rounded-[15px] w-full max-w-[333px] px-5 py-10"
         >
             <Image
                 src={card.image.url}

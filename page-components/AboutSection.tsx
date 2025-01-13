@@ -25,6 +25,9 @@ const AboutSection: FC<AboutSectionProps> = ({ data }) => {
                             className="object-cover"
                         />
                         <Before className="absolute top-4 left-0" />
+                        <p className="text-lg text-white leading-[30px] absolute top-5 left-6 z-1">
+                            {data.before}
+                        </p>
                     </div>
                     <div className="ml-[2px] relative">
                         <Image
@@ -38,6 +41,9 @@ const AboutSection: FC<AboutSectionProps> = ({ data }) => {
                         />
                         <Arrows className="absolute top-32 left-[-14px]" />
                         <After className="absolute bottom-4 right-0" />
+                        <p className="text-lg text-white leading-[30px] absolute bottom-5 right-3 z-1">
+                            {data.after}
+                        </p>
                     </div>
                 </div>
                 <Markdown
