@@ -3,18 +3,10 @@ interface Image {
     url: string;
 }
 
-interface WorkList {
-    id: string;
-    number: string;
+interface BaseListItem {
+    id?: string;
     title: string;
     text: string;
-}
-
-interface WorkStage {
-    id: string;
-    title: string;
-    text: string;
-    titleList: string;
 }
 
 interface WorkSectionData {
@@ -22,10 +14,23 @@ interface WorkSectionData {
     titleStage: string;
     image: Image;
     button: string;
-    workList: WorkList[];
-    workStage: WorkStage[];
+    workList: WorkItemProps[];
+    workStage: StageItemProps[];
 }
 
+// WORK LIST
+export interface WorkItemProps extends BaseListItem {
+    number: string;
+}
+export type WorkListProps = Pick<WorkSectionData, 'workList'>;
+
+// STAGE LIST
+export interface StageItemProps extends BaseListItem {
+    titleList: string;
+}
+export type StageListProps = Pick<WorkSectionData, 'workStage'>;
+
+// WORK SECTION
 export interface WorkSectionProps {
     data: WorkSectionData;
 }

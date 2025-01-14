@@ -79,18 +79,6 @@ const Slider: FC<SliderProps> = ({ children, className, hideButtons = false }) =
                     </button>
                 </>
             )}
-
-            {/* Індикація слайда */}
-            {/* <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {children.map((_, index) => (
-                    <div
-                        key={index}
-                        className={`w-2 h-2 rounded-full ${
-                            index === currentIndex ? 'bg-gray-800' : 'bg-gray-400'
-                        }`}
-                    ></div>
-                ))}
-            </div> */}
         </div>
     );
 };
