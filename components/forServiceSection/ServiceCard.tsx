@@ -5,7 +5,7 @@ import { H2 } from '../typography/H2';
 import { Markdown } from '../Markdown';
 import { ServiceCardProps } from '@/types/servicesSectionTypes';
 
-const ServiceCard: FC<ServiceCardProps> = ({ card, index }) => {
+const ServiceCard: FC<ServiceCardProps> = ({ serviceCard, index }) => {
     const imageClasses = [
         'w-full',
         'h-auto',
@@ -27,34 +27,34 @@ const ServiceCard: FC<ServiceCardProps> = ({ card, index }) => {
 
     return (
         <li
-            key={card.id}
+            key={serviceCard.id}
             className="flex flex-col low-box-shadow rounded-[15px] w-full max-w-[333px] px-5 py-10"
         >
             <Image
-                src={card.image.url}
-                alt={card.image.alt}
+                src={serviceCard.image.url}
+                alt={serviceCard.image.alt}
                 width={314}
                 height={219}
                 className={imageClasses}
             />
             <H2 variant="title-section" className="mt-[30px]">
-                {card.title}
+                {serviceCard.title}
             </H2>
 
             <div className="mt-5 text-15px leading-22px">
                 {/* На мобільних пристроях рендерим лише перший абзац */}
                 <div className="block sm:hidden">
-                    <Markdown text={getFirstParagraph(card.text)} />
+                    <Markdown text={getFirstParagraph(serviceCard.text)} />
                 </div>
                 {/* На великих екранах рендерімо весь текст */}
                 <div className="hidden sm:block">
-                    <Markdown text={card.text} />
+                    <Markdown text={serviceCard.text} />
                 </div>
             </div>
 
-            <p className="mt-[30px] text-xl font-medium leading-7">{card.price}</p>
+            <p className="mt-[30px] text-xl font-medium leading-7">{serviceCard.price}</p>
             <LinkBtn to="#" className="mt-[30px]">
-                {card.button}
+                {serviceCard.button}
             </LinkBtn>
         </li>
     );

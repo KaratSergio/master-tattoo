@@ -52,6 +52,7 @@ export default {
                 a_gradient: 'linear-gradient(261deg, #33B7EF 13.79%, #6AE8D1 83.98%)',
                 b_gradient:
                     'linear-gradient(180deg, #AFE7FF 0%, #E5F8FF 0.01%, #E0FFF9 100%, #E4FFFA 100%)',
+                c_gradient: 'linear-gradient(180deg, #33B7EF 0%, #6AE8D1 100%)',
             },
         },
     },

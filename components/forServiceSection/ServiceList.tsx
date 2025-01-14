@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import ServiceCard from './ServiceCard';
-import { ServicesSectionProps } from '@/types/servicesSectionTypes';
+import { ServiceListProps } from '@/types/servicesSectionTypes';
 import Slider from '../Slider';
 
-const ServiceList: FC<ServicesSectionProps> = ({ data }) => {
+const ServiceList: FC<ServiceListProps> = ({ serviceCards }) => {
     return (
         <ul>
             <Slider>
-                {data.serviceCard.map((card, index) => (
-                    <ServiceCard key={card.id} card={card} index={index} />
+                {serviceCards.map((card, index) => (
+                    <ServiceCard key={card.id} serviceCard={card} index={index} />
                 ))}
             </Slider>
         </ul>

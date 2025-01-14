@@ -60,7 +60,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
             }
             servicesSection(locale: uk) {
                 title
-                serviceCard {
+                serviceCards {
                     id
                     price
                     text

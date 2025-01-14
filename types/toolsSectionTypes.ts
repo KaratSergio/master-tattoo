@@ -3,7 +3,7 @@ interface Image {
     url: string;
 }
 
-interface ToolsList {
+interface ToolCard {
     id: string;
     title: string;
     text: string;
@@ -12,7 +12,15 @@ interface ToolsList {
 
 interface ToolsSectionData {
     title: string;
-    tools: ToolsList[];
+    tools: ToolCard[];
+}
+
+export interface ToolCardProps {
+    tool: ToolCard;
+}
+
+export interface ToolsListProps {
+    tools: ToolCard[];
 }
 
 export interface ToolsSectionProps {

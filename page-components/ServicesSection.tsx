@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import { H2 } from '@/components/typography/H2';
 import ServiceList from '@/components/forServiceSection/ServiceList';
 import { ServicesSectionProps } from '@/types/servicesSectionTypes';
-import { H2 } from '@/components/typography/H2';
 
 const ServicesSection: FC<ServicesSectionProps> = ({ data }) => {
     return (
@@ -10,7 +10,7 @@ const ServicesSection: FC<ServicesSectionProps> = ({ data }) => {
                 <H2 variant="title-section" className="absolute top-[-6px] left-5">
                     {data.title}
                 </H2>
-                <ServiceList data={data} />
+                <ServiceList serviceCards={data.serviceCards} />
             </div>
         </section>
     );

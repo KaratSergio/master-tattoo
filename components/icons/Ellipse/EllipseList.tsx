@@ -1,4 +1,4 @@
-export const Ellipse = ({ className }: { className: string }) => {
+export const EllipseList = ({ className }: { className: string }) => {
     return (
         <svg
             className={className}

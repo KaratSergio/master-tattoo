@@ -5,7 +5,7 @@ import { H3 } from '@/components/typography/H3';
 import { P } from '@/components/typography/P';
 import { WorkSectionProps } from '@/types/workSectionTypes';
 import { Button } from '@/components/Button';
-import { Ellipse } from '@/components/icons/Ellipse';
+import { EllipseList } from '@/components/icons/Ellipse/EllipseList';
 
 const WorkSection: FC<WorkSectionProps> = ({ data }) => {
     return (
@@ -46,7 +46,7 @@ const WorkSection: FC<WorkSectionProps> = ({ data }) => {
                             {data.workStage.map(stageItem => (
                                 <li key={stageItem.id}>
                                     <div className="flex items-center gap-4">
-                                        <Ellipse className="" />
+                                        <EllipseList className="" />
                                         <strong className="text-20px my-5 block font-medium lowercase">
                                             {stageItem.titleList}
                                         </strong>

@@ -16,12 +16,16 @@ interface ServiceCard {
 
 interface ServicesSectionData {
     title: string;
-    serviceCard: ServiceCard[];
+    serviceCards: ServiceCard[];
 }
 
 export interface ServiceCardProps {
-    card: ServiceCard;
+    serviceCard: ServiceCard;
     index: number;
+}
+
+export interface ServiceListProps {
+    serviceCards: ServiceCard[];
 }
 
 export interface ServicesSectionProps {
