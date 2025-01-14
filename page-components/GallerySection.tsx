@@ -1,28 +1,23 @@
 import { FC } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowLink } from '@/components/icons/arrows/ArrowLink';
+import { H2 } from '@/components/typography/H2';
 import { GallerySectionProps } from '@/types/gallerySectionTypes';
+import GalleryList from '@/components/forGallerySection/GalleryList';
 
 const GallerySection: FC<GallerySectionProps> = ({ data }) => {
     return (
         <section>
-            <div className="container">
-                <h2>{data.title}</h2>
-                <ul>
-                    {data.gallery.map(picture => (
-                        <li key={picture.id}>
-                            <Image
-                                src={picture.url}
-                                alt={picture.alt}
-                                width={279}
-                                height={279}
-                                quality={90}
-                                className="object-cover"
-                            />
-                        </li>
-                    ))}
-                </ul>
-                <Link href="#">{data.text}</Link>
+            <div className="container mt-4">
+                <H2 variant="title-section">{data.title}</H2>
+                <GalleryList gallery={data.gallery} />
+                <Link
+                    href="#"
+                    className="flex items-center font-medium text-lg text-deep_blue leading-[30px] lowercase"
+                >
+                    {data.text}
+                    <ArrowLink className="ml-5" />
+                </Link>
             </div>
         </section>
     );

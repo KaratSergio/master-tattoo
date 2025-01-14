@@ -18,11 +18,9 @@ interface ToolsSectionData {
 export interface ToolCardProps {
     tool: ToolCard;
 }
-
 export interface ToolsListProps {
     tools: ToolCard[];
 }
-
 export interface ToolsSectionProps {
     data: ToolsSectionData;
 }

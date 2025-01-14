@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { H3 } from '../typography/H3';
 import { P } from '../typography/P';
-import { EllipseTools } from '@/components/icons/Ellipse/EllipseTools';
+import { EllipseTools } from '@/components/icons/ellipse/EllipseTools';
 import { ToolCardProps } from '@/types/toolsSectionTypes';
 
 const ToolCard: FC<ToolCardProps> = ({ tool }) => {

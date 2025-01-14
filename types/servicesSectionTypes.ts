@@ -23,11 +23,9 @@ export interface ServiceCardProps {
     serviceCard: ServiceCard;
     index: number;
 }
-
 export interface ServiceListProps {
     serviceCards: ServiceCard[];
 }
-
 export interface ServicesSectionProps {
     data: ServicesSectionData;
 }

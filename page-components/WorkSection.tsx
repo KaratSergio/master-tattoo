@@ -5,7 +5,7 @@ import { H3 } from '@/components/typography/H3';
 import { P } from '@/components/typography/P';
 import { WorkSectionProps } from '@/types/workSectionTypes';
 import { Button } from '@/components/Button';
-import { EllipseList } from '@/components/icons/Ellipse/EllipseList';
+import { EllipseList } from '@/components/icons/ellipse/EllipseList';
 
 const WorkSection: FC<WorkSectionProps> = ({ data }) => {
     return (
