@@ -3,18 +3,18 @@ interface Image {
     url: string;
 }
 
-interface ReviewsList {
-    id: string;
-    title: string;
-    text: string;
-    image: Image;
-}
-
 interface ReviewsSectionData {
     title: string;
     text: string;
-    reviewsList: ReviewsList[];
+    reviewsList: CommentProps[];
 }
+
+export type CommentProps = Pick<ReviewsSectionData, 'title' | 'text'> & {
+    id: string;
+    image?: Image;
+};
+
+export type ReviewsListProps = Pick<ReviewsSectionData, 'reviewsList'>;
 
 export interface ReviewsSectionProps {
     data: ReviewsSectionData;

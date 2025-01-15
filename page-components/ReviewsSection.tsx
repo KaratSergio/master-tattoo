@@ -1,19 +1,16 @@
 import { FC } from 'react';
+import { H2 } from '@/components/typography/H2';
+import ReviewsList from '@/components/forReviewsSection/ReviewsList';
 import { ReviewsSectionProps } from '@/types/reviewsSectionTypes';
 
 const ReviewsSection: FC<ReviewsSectionProps> = ({ data }) => {
     return (
         <section>
-            <div className="container">
-                <h2>{data.title}</h2>
-                <ul>
-                    {data.reviewsList.map(review => (
-                        <li key={review.id}>
-                            <h3>{review.title}</h3>
-                            <p>{review.text}</p>
-                        </li>
-                    ))}
-                </ul>
+            <div className="container relative mt-[60px]">
+                <H2 variant="title-section" className="absolute top-[-6px] left-5">
+                    {data.title}
+                </H2>
+                <ReviewsList reviewsList={data.reviewsList} />
             </div>
         </section>
     );

@@ -4,6 +4,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { PromotionSectionProps } from '@/types/promotionSectionTypes';
+import { H3 } from '@/components/typography/H3';
 import { Button } from '@/components/Button';
 import { Markdown } from '@/components/Markdown';
 
@@ -25,13 +26,14 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
     };
 
     return (
-        <section className="promotion-section py-12">
+        <section className="mt-[60px]">
             <div className="container mx-auto px-4">
                 <div className="relative w-full max-w-lg mx-auto">
-                    <h2 className="absolute text-white top-16 left-2 text-2xl font-bold">
+                    <h2 className="absolute w-24 text-white top-16 left-10 text-4xl font-bold">
                         {data.title}
                     </h2>
-                    <p className="absolute text-white top-2 left-2">{data.text}</p>
+                    <H3 className="absolute text-white top-8 left-10">{data.text}</H3>
+
                     <Image
                         src={data.image.url}
                         alt={data.image.alt}
@@ -39,12 +41,12 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                         height={574}
                         quality={90}
                         sizes="(max-width: 768px) 100vw, 815px"
-                        className="rounded-lg object-cover"
+                        className="rounded-t-2xl object-cover object-end"
                     />
                 </div>
 
-                <div className="bg-a_gradient p-3">
-                    <p className="text-lg text-gray-700 text-center">{data.text1}</p>
+                <div className="bg-a_gradient px-3 pt-10 pb-12 rounded-b-2xl">
+                    <p className="text-lg text-gray-700">{data.text1}</p>
                     <form
                         onSubmit={handleSubmit(onSubmit)}
                         className="mt-8 flex flex-col items-center"
@@ -55,7 +57,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                                 placeholder="Ім'я"
                                 type="text"
                                 {...register('name', { required: "Введіть ваше ім'я" })}
-                                className="p-4 block w-[295px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
+                                className="p-[10px] block w-[295px] rounded-md border-gray-300 shadow-sm focus:outline-none"
                             />
                             {errors.name && (
                                 <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -67,14 +69,14 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                                 type="text"
                                 placeholder="Телефон"
                                 {...register('phone', { required: 'Введіть номер телефону' })}
-                                className="p-4 block w-[295px] rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200"
+                                className="mt-[10px] mb-[30px] p-[10px] block w-[295px] rounded-md border-gray-300 shadow-sm focus:outline-none"
                             />
                             {errors.phone && (
                                 <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
                             )}
                         </div>
 
-                        <Button variant="deep-blue" type="submit" className="w-full">
+                        <Button variant="deep-blue" type="submit" className="w-full pl-[17px]">
                             {data.button}
                         </Button>
                         {data.buttonError && (
@@ -82,10 +84,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                         )}
                     </form>
 
-                    <Markdown
-                        className="mt-6 text-sm text-gray-500 text-center"
-                        text={data.agreement}
-                    />
+                    <Markdown className="mt-6 text-[12px] text-white" text={data.agreement} />
                 </div>
             </div>
         </section>

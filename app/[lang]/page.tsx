@@ -145,6 +145,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
             }
             profileSection(locale: uk) {
                 title
+                title1
                 text
                 button
                 image {

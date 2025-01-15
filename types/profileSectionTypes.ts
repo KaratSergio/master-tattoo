@@ -3,19 +3,22 @@ interface Image {
     url: string;
 }
 
-interface CertificateList {
+interface ProfileSectionData {
+    title: string;
+    title1: string;
+    text: string;
+    button: string;
+    image: Image;
+    certificate: CertificateCardProps[];
+}
+
+export interface CertificateCardProps {
     id: string;
     text: string;
     image: Image;
 }
 
-interface ProfileSectionData {
-    title: string;
-    text: string;
-    button: string;
-    image: Image;
-    certificate: CertificateList[];
-}
+export type CertificateListProps = Pick<ProfileSectionData, 'certificate'>;
 
 export interface ProfileSectionProps {
     data: ProfileSectionData;
