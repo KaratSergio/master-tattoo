@@ -32,6 +32,7 @@ export default {
                 dark: '#3C444C',
                 dark_a: '#2E2C3B',
                 dark_b: '#333',
+                dark_gray: '#CBCFD4',
                 sky_blue: '#33B7EF',
                 deep_blue: '#428DFF',
             },
