@@ -80,7 +80,7 @@ export const Chat = ({ className }: { className: string }) => {
                     y2="14"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#33B7EF" />
+                    <stop stopColor="#33B7EF" />
                     <stop offset="1" stopColor="#6AE8D1" />
                 </linearGradient>
                 <linearGradient

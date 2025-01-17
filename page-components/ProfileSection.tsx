@@ -6,8 +6,8 @@ import { Markdown } from '@/components/Markdown';
 import { ProfileSectionProps } from '@/types/profileSectionTypes';
 import CertificateList from '@/components/forProfileSection/CertificateList';
 
-import { EllipseProfileSky } from '@/components/icons/ellipse/EllipseProfileSky';
-import { EllipseProfileBlue } from '@/components/icons/ellipse/EllipseProfileBlue';
+import { EllipseProfileSky } from '@/components/icons/ellipse/profileSection/EllipseProfileSky';
+import { EllipseProfileBlue } from '@/components/icons/ellipse/profileSection/EllipseProfileBlue';
 
 const ProfileSection: FC<ProfileSectionProps> = ({ data }) => {
     return (

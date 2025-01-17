@@ -3,8 +3,8 @@ interface Image {
     url: string;
 }
 
-interface SocialList {
-    id: string;
+interface IconImage {
+    alt: string;
     url: string;
 }
 
@@ -17,8 +17,16 @@ interface FooterData {
     text2: string;
     text3: string;
     logo: Image;
-    social: SocialList[];
+    social: SocialLinkProps[];
 }
+
+export interface SocialLinkProps {
+    id: string;
+    url: string;
+    iconImg: IconImage;
+}
+
+export type SocialLinkListProps = Pick<FooterData, 'social'>;
 
 export interface FooterProps {
     data: FooterData;

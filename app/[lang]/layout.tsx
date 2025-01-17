@@ -135,6 +135,10 @@ export default async function RootLayout({
                 social {
                     id
                     url
+                    iconImg {
+                        alt
+                        url
+                    }
                 }
             }
         }

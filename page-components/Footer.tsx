@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { FooterProps } from '@/types/footerTypes';
 import { Button } from '@/components/Button';
+import SocialLinkList from '@/components/forFooter/SocialLinkList';
 
 const Footer: FC<FooterProps> = ({ data }) => {
     return (
@@ -27,13 +28,7 @@ const Footer: FC<FooterProps> = ({ data }) => {
                 </Button>
                 <p className="text-center text-[20px] font-bold">{data.phone}</p>
 
-                <ul>
-                    {data.social.map(link => (
-                        <li key={link.id}>
-                            <p>{link.url}</p>
-                        </li>
-                    ))}
-                </ul>
+                <SocialLinkList social={data.social} />
 
                 <div className="w-full flex flex-col text-center border-t-2 border-t-white pt-[50px] mt-[50px]">
                     <p>{data.text1}</p>
