@@ -26,7 +26,7 @@ export interface SocialLinkProps {
     iconImg: IconImage;
 }
 
-export type SocialLinkListProps = Pick<FooterData, 'social'>;
+export type SocialLinkListProps = Pick<FooterData, 'social'> & { className?: string };
 
 export interface FooterProps {
     data: FooterData;

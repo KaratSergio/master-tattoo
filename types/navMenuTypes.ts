@@ -1,4 +1,5 @@
 import { Locale } from '@/i18n.config';
+import { SocialLinkProps } from './footerTypes';
 
 type Logotype = {
     alt: string;
@@ -20,6 +21,7 @@ export interface NavMenuData {
 export interface NavMenuProps {
     data: NavMenuData;
     lang: Locale;
+    social: SocialLinkProps[];
 }
 
 export interface BurgerMenuProps extends NavMenuProps {

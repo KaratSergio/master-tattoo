@@ -157,7 +157,7 @@ export default async function RootLayout({
     return (
         <html lang={lang} className="h-full">
             <body className={`${montserrat.className} ${roboto_mono.variable}`}>
-                <Header data={data.navMenu} lang={lang} />
+                <Header data={data.navMenu} lang={lang} social={data.footer.social} />
                 {children}
                 <Footer data={data.footer} />
             </body>

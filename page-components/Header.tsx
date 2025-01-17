@@ -7,7 +7,7 @@ import { NavMenuProps } from '@/types/navMenuTypes';
 import { BurgerMenu } from '@/components/BurgerMenu';
 import { Locale } from '@/i18n.config';
 
-const Header: FC<NavMenuProps> = ({ data, lang: initialLang }) => {
+const Header: FC<NavMenuProps> = ({ data, lang: initialLang, social }) => {
     const [lang, setLang] = useState<Locale>(initialLang);
 
     const handleLanguageChange = (selectedLang: Locale) => {
@@ -33,7 +33,12 @@ const Header: FC<NavMenuProps> = ({ data, lang: initialLang }) => {
                 </strong>
             </div>
 
-            <BurgerMenu data={data} lang={lang} onLangChange={handleLanguageChange} />
+            <BurgerMenu
+                data={data}
+                lang={lang}
+                social={social}
+                onLangChange={handleLanguageChange}
+            />
 
             <nav className="hidden">
                 <ul className="flex gap-6">
