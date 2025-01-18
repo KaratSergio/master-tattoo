@@ -2,7 +2,6 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { H2 } from '@/components/typography/H2';
 import { WorkSectionProps } from '@/types/workSectionTypes';
-import { Button } from '@/components/Button';
 
 import WorkList from '@/components/forWorkSection/WorkList/WorkList';
 import WorkStage from '@/components/forWorkSection/WorkStage/StageList';
@@ -30,8 +29,7 @@ const WorkSection: FC<WorkSectionProps> = ({ data }) => {
                         <h3>{data.titleStage}</h3>
                     </div>
                     <div className="mt-[60px]">
-                        <WorkStage workStage={data.workStage} />
-                        <Button className="">{data.button}</Button>
+                        <WorkStage workStage={data.workStage} button={data.button} />
                     </div>
                 </div>
             </div>

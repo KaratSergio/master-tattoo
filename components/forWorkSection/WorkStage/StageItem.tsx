@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import { StageItemProps } from '@/types/workSectionTypes';
 import { H3 } from '@/components/typography/H3';
 import { P } from '@/components/typography/P';
-import { StageItemProps } from '@/types/workSectionTypes';
 import { EllipseList } from '@/components/icons/ellipse/EllipseList';
 
 const StageItem: FC<StageItemProps> = ({ title, text, titleList }) => {

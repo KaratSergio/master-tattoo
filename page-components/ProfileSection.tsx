@@ -31,7 +31,9 @@ const ProfileSection: FC<ProfileSectionProps> = ({ data }) => {
                 <div className="pt-48 px-5 pb-10 rounded-[15px] low-box-shadow">
                     <H2 variant="title-section">{data.title}</H2>
                     <Markdown text={data.text} />
-                    <Button className="mt-10">{data.button}</Button>
+                    <Button iconEnabled={false} className="mt-10 pl-6 justify-center">
+                        {data.button}
+                    </Button>
                 </div>
             </div>
 

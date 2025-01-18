@@ -26,9 +26,10 @@ export type WorkListProps = Pick<WorkSectionData, 'workList'>;
 
 // STAGE LIST
 export interface StageItemProps extends BaseListItem {
+    index?: number;
     titleList: string;
 }
-export type StageListProps = Pick<WorkSectionData, 'workStage'>;
+export type StageListProps = Pick<WorkSectionData, 'workStage' | 'button'> & { index?: number };
 
 // WORK SECTION
 export interface WorkSectionProps {

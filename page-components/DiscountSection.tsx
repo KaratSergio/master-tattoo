@@ -1,7 +1,13 @@
+'use client';
+
 import { FC } from 'react';
+import { Button } from '@/components/Button';
 import { DiscountSectionProps } from '@/types/discountSectionTypes';
+import { useCountdown } from '@/hooks/useCountdown';
 
 const DiscountSection: FC<DiscountSectionProps> = ({ data }) => {
+    const countdown = useCountdown(22920);
+
     return (
         <section className="mt-[60px]">
             <div className="container">
@@ -17,12 +23,12 @@ const DiscountSection: FC<DiscountSectionProps> = ({ data }) => {
                             {data.text1}
                         </p>
                         <p className="mt-[3px] text-[30px] text-white font-semibold leading-22px">
-                            06:31:12
+                            {countdown}
                         </p>
                     </div>
-                    <button className="mt-[25px] py-[15px] pl-[42px] pr-[17px] text-15px rounded-[10px] font-bold leading-5 text-deep_blue uppercase bg-white">
+                    <Button variant="deep-blue" className="mt-[25px] justify-center pl-5">
                         {data.button}
-                    </button>
+                    </Button>
                 </div>
             </div>
         </section>

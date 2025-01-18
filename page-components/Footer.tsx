@@ -23,7 +23,7 @@ const Footer: FC<FooterProps> = ({ data }) => {
                         <p className="text-[12px]">{data.profession}</p>
                     </div>
                 </div>
-                <Button variant="sky-white" className="my-10">
+                <Button variant="sky-white" className="my-10 justify-center pl-5">
                     {data.button}
                 </Button>
                 <p className="text-center text-[20px] font-bold">{data.phone}</p>

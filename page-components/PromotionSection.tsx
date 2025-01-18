@@ -76,7 +76,12 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                             )}
                         </div>
 
-                        <Button variant="deep-blue" type="submit" className="w-full pl-[17px]">
+                        <Button
+                            variant="deep-blue"
+                            iconEnabled={false}
+                            type="submit"
+                            className="w-full justify-center pr-10"
+                        >
                             {data.button}
                         </Button>
                         {data.buttonError && (

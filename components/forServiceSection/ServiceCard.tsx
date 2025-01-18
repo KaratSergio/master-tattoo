@@ -75,7 +75,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ serviceCard, index }) => {
             </div>
 
             <p className="mt-[30px] text-xl font-medium leading-7">{serviceCard.price}</p>
-            <LinkBtn to="#" className="mt-[30px]">
+            <LinkBtn to="#" className="mt-[30px] pr-12">
                 {serviceCard.button}
             </LinkBtn>
         </li>

@@ -7,7 +7,7 @@ import { ToolCardProps } from '@/types/toolsSectionTypes';
 
 const ToolCard: FC<ToolCardProps> = ({ tool }) => {
     return (
-        <li className="flex flex-col items-center w-full max-w-[330px]">
+        <li className="flex flex-col items-center w-full max-w-[330px] sm:max-w-[440px]">
             <div className="relative mt-12 w-[200px] h-[220px]">
                 <Image
                     src={tool.image.url}
@@ -21,7 +21,7 @@ const ToolCard: FC<ToolCardProps> = ({ tool }) => {
             </div>
             <div>
                 <H3 className="mt-12">{tool.title}</H3>
-                <P className="mt-5 w-full max-w-[330px]">{tool.text}</P>
+                <P className="mt-5 w-full max-w-[320px]">{tool.text}</P>
             </div>
         </li>
     );
