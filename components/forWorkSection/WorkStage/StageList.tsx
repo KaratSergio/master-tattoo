@@ -10,11 +10,7 @@ const StageList: FC<StageListProps> = ({ workStage, button }) => {
                 <div key={stage.id}>
                     <StageItem {...stage} index={index} />
                     {/* The button after the first element on mobile devices */}
-                    {index === 0 && (
-                        <Button className="mt-[30px] mb-10 pl-5 justify-center sm:hidden">
-                            {button}
-                        </Button>
-                    )}
+                    {index === 0 && <Button className="mt-[30px] mb-10 sm:hidden">{button}</Button>}
                 </div>
             ))}
         </ul>

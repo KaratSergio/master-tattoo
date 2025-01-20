@@ -26,7 +26,7 @@ const DiscountSection: FC<DiscountSectionProps> = ({ data }) => {
                             {countdown}
                         </p>
                     </div>
-                    <Button variant="deep-blue" className="mt-[25px] justify-center pl-5">
+                    <Button variant="deep-blue" className="mt-[25px]">
                         {data.button}
                     </Button>
                 </div>

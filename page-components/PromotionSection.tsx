@@ -80,7 +80,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                             variant="deep-blue"
                             iconEnabled={false}
                             type="submit"
-                            className="w-full justify-center pr-10"
+                            className="w-full"
                         >
                             {data.button}
                         </Button>

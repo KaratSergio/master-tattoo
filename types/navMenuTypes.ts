@@ -12,14 +12,27 @@ interface NavMenu {
     url: string;
 }
 
+interface HeaderData {
+    button1: string;
+    button2: string;
+    profession: string;
+    phone: string;
+}
+
+interface HeaderProps {
+    headerData: HeaderData;
+}
+
+type PartialHeaderProps = Partial<HeaderProps>;
+
 export interface NavMenuData {
     logo: Logotype;
     authorName: string;
     pages: NavMenu[];
 }
 
-export interface NavMenuProps {
-    data: NavMenuData;
+export interface NavMenuProps extends PartialHeaderProps {
+    navData: NavMenuData;
     lang: Locale;
     social: SocialLinkProps[];
 }

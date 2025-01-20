@@ -8,10 +8,8 @@ import LanguageSelector from '@/components/LanguageSelector';
 
 import SocialLinkList from './forFooter/SocialLinkList';
 
-export const BurgerMenu: FC<BurgerMenuProps> = ({ data, lang, onLangChange, social }) => {
+export const BurgerMenu: FC<BurgerMenuProps> = ({ navData, lang, onLangChange, social }) => {
     const [isOpen, setIsOpen] = useState(false);
-
-    console.log('nj brjyrb', social);
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'unset';
@@ -40,7 +38,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ data, lang, onLangChange, soci
                     <div className="absolute flex gap-3 top-8 left-5">
                         <Link href="/">
                             <Image
-                                src={data.logo.url}
+                                src={navData.logo.url}
                                 alt="logotype"
                                 width={98}
                                 height={58}
@@ -50,7 +48,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ data, lang, onLangChange, soci
                             />
                         </Link>
                         <strong className="w-24 text-15px font-medium leading-5 text-dark_a">
-                            {data.authorName}
+                            {navData.authorName}
                         </strong>
                     </div>
                     <button
@@ -69,7 +67,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ data, lang, onLangChange, soci
                         />
                         <nav className="pt-6 w-full">
                             <ul className="flex flex-col text-center italic gap-4">
-                                {data.pages.map(page => (
+                                {navData.pages.map(page => (
                                     <li key={page.id} className="py-2 px-4 hover-nav">
                                         <Link
                                             href={page.url}

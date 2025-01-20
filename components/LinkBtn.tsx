@@ -13,7 +13,7 @@ export const LinkBtn: FC<LinkBtnProps> = ({ children, className, to }) => {
         <Link
             href={to}
             className={cn(
-                'w-full rounded-[10px] py-[15px] pl-[42px] pr-[17px] text-[15px] low-box-shadow font-bold leading-5 uppercase',
+                'w-full justify-center rounded-[10px] py-[15px] pl-[17px] pr-[17px] text-[15px] low-box-shadow font-bold leading-5 uppercase',
                 'bg-a_gradient transition duration-300 text-white text-center',
                 className
             )}

@@ -20,12 +20,8 @@ const SubscribeSection: FC<SubscribeSectionProps> = ({ data }) => {
                 <h2 className="text-lg font-bold mb-[30px]">{data.title}</h2>
                 <P>{data.text}</P>
                 <div className="flex flex-col gap-[31px] mt-10">
-                    <LinkBtn className="justify-center pl-5" to="#">
-                        {data.button1}
-                    </LinkBtn>
-                    <LinkBtn className="justify-center pl-5" to="#">
-                        {data.button2}
-                    </LinkBtn>
+                    <LinkBtn to="#">{data.button1}</LinkBtn>
+                    <LinkBtn to="#">{data.button2}</LinkBtn>
                 </div>
             </div>
         </section>

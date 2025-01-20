@@ -120,6 +120,12 @@ export default async function RootLayout({
                     url
                 }
             }
+            header(locale: uk) {
+                button1
+                button2
+                phone
+                profession
+            }
             footer(locale: uk) {
                 nameAuthor
                 button
@@ -157,7 +163,12 @@ export default async function RootLayout({
     return (
         <html lang={lang} className="h-full">
             <body className={`${montserrat.className} ${roboto_mono.variable}`}>
-                <Header data={data.navMenu} lang={lang} social={data.footer.social} />
+                <Header
+                    lang={lang}
+                    navData={data.navMenu}
+                    headerData={data.header}
+                    social={data.footer.social}
+                />
                 {children}
                 <Footer data={data.footer} />
             </body>
