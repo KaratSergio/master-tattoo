@@ -115,12 +115,29 @@ section {
     backdrop-filter: blur(8px);
 } */
 
-/* .hero-bg {
-    background: url('../../public/hero/bg.webp') center bottom / cover no-repeat;
-    background-size: 320% 122%;
-    background-position: center bottom 32px;
+.hero-bg {
+    position: relative;
+    background: url('../../public/hero/person_hero.webp') no-repeat;
+    background-size: 470px 470px;
+    background-position: bottom 62px right -50px;
+    overflow: hidden;
 }
-.hero-bg-stars {
+@media (max-width: 480px) {
+    .hero-bg {
+        background-position: bottom 62px right -150px;
+    }
+}
+@media (min-width: 500px) {
+    .hero-bg {
+        background-position: bottom 62px left 60px;
+    }
+}
+@media (min-width: 1440px) {
+    .hero-bg {
+        background: none;
+    }
+}
+/* .hero-bg-stars {
     background:
         url('../../public/stars/star.webp') no-repeat,
         url('../../public/stars/star2.webp') no-repeat,
@@ -129,7 +146,7 @@ section {
         124px 142px,
         117px 137px,
         110px 120px;
-    background-position:
+    background-position:`
         top -14px right,
         top 4% left 35px,
         bottom 45% center;
