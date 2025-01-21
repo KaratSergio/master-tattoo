@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import { H2 } from '@/components/typography/H2';
 import { Markdown } from '@/components/Markdown';
 import { AboutSectionProps } from '@/types/aboutSectionTypes';
 
@@ -10,46 +11,51 @@ import { Arrows } from '@/components/icons/arrows/Arrows';
 const AboutSection: FC<AboutSectionProps> = ({ data }) => {
     return (
         <section>
-            <div className="container">
-                <h2 className="text-25px font-bold leading-8">{data.title}</h2>
-                <p className="mt-5 text-15px leading-22px">{data.text}</p>
-                <div className="mt-[30px] mb-8 flex items-center justify-center">
-                    <div className="relative">
+            <div className="container about-section-grid">
+                {/* A */}
+                <div className="block-a">
+                    <H2 variant="title-section">{data.title}</H2>
+                    <p className="mt-5 text-15px 2xl:text-base leading-22px">{data.text}</p>
+                </div>
+                {/* B */}
+                <div className="block-b my-8 xl:my-0 flex items-center justify-center">
+                    <div className="relative w-[179px] xl:w-[260px] 2xl:w-[328px]">
                         <Image
                             src={data.image1.url}
                             alt={data.image1.alt}
-                            width={179}
-                            height={337}
+                            width={328}
+                            height={615}
                             quality={90}
-                            sizes="337px"
                             className="object-cover"
                         />
-                        <Before className="absolute top-4 left-0" />
-                        <p className="text-lg text-white leading-[30px] absolute top-5 left-6 z-1">
+                        <Before className="absolute top-4 left-0 xl:w-[90px] xl:h-[50px]" />
+                        <p className="text-lg xl:text-xl text-white leading-[30px] absolute top-5 xl:top-7 left-6 z-1">
                             {data.before}
                         </p>
                     </div>
-                    <div className="ml-[2px] relative">
+                    <div className="ml-[2px] w-[193px] relative xl:w-[279px] 2xl:w-[352px]">
                         <Image
                             src={data.image2.url}
                             alt={data.image2.alt}
-                            width={193}
-                            height={337}
+                            width={352}
+                            height={615}
                             quality={90}
-                            sizes="337px"
                             className="object-cover"
                         />
-                        <Arrows className="absolute top-32 left-[-14px]" />
-                        <After className="absolute bottom-4 right-0" />
-                        <p className="text-lg text-white leading-[30px] absolute bottom-5 right-3 z-1">
+                        <Arrows className="absolute top-32 xl:top-[216px] 2xl:top-[286px] left-[-14px] xl:left-[-24px] xl:size-[46px]" />
+                        <After className="absolute bottom-4 right-0 xl:w-[90px] xl:h-[50px]" />
+                        <p className="text-lg xl:text-xl text-white leading-[30px] absolute bottom-5 xl:bottom-7 right-3 z-1">
                             {data.after}
                         </p>
                     </div>
                 </div>
-                <Markdown
-                    className="mt-[15px] w-[310px] font-medium leading-25px"
-                    text={data.list}
-                />
+                {/* C */}
+                <div className="block-c xl:mt-[60px] 2xl:mt-[10px]">
+                    <Markdown
+                        className="mt-[15px] xl:mt-6 w-[310px] xl:w-full 2xl:text-lg font-medium leading-25px"
+                        text={data.list}
+                    />
+                </div>
             </div>
         </section>
     );

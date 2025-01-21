@@ -100,6 +100,7 @@ section {
         background-position: top 108px right 75px;
         z-index: 10px;
     }
+
     .hero-bg-svg {
         background: url('../../public/bg/bg_1.svg'), url('../../public/bg/stroke_1.svg');
         background-repeat: no-repeat;
@@ -111,8 +112,28 @@ section {
             top -280px left -80px;
         z-index: 0;
     }
+
     .clip-angled {
         clip-path: polygon(0 0, 100% 0, 94% 94%, 34% 88%);
+    }
+
+    .about-section-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'A B'
+            'C B';
+    }
+
+    .about-section-grid .block-a {
+        grid-area: A;
+    }
+    .about-section-grid .block-b {
+        grid-area: B;
+    }
+    .about-section-grid .block-c {
+        grid-area: C;
     }
 }
 
@@ -121,11 +142,13 @@ section {
         background-size: 620px 620px;
         background-position: top 105px right 250px;
     }
+
     .hero-bg-svg {
         background-position:
             top -100px left -70px,
             top -100px left -80px;
     }
+
     .clip-angled {
         clip-path: polygon(0 0, 100% 0, 90% 96%, 30% 90%);
     }

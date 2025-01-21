@@ -16,7 +16,8 @@ export const H2 = ({
                 '',
                 {
                     'gradient-text': variant === 'primary',
-                    'text-25px font-bold leading-8': variant === 'title-section',
+                    'text-25px xl:text-[35px] 2xl:text-[45px] font-bold leading-8 xl:leading-[42px] 2xl:leading-[60px]':
+                        variant === 'title-section',
                 },
                 className
             )}
