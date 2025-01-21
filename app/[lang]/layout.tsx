@@ -162,7 +162,7 @@ export default async function RootLayout({
 
     return (
         <html lang={lang} className="h-full">
-            <body className={`${montserrat.className} ${roboto_mono.variable}`}>
+            <body className={`hero-bg-svg ${montserrat.className} ${roboto_mono.variable}`}>
                 <Header
                     lang={lang}
                     navData={data.navMenu}

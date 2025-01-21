@@ -11,7 +11,7 @@ const AboutSection: FC<AboutSectionProps> = ({ data }) => {
     return (
         <section>
             <div className="container">
-                <h2 className="mt-[82px] text-25px font-bold leading-8">{data.title}</h2>
+                <h2 className="text-25px font-bold leading-8">{data.title}</h2>
                 <p className="mt-5 text-15px leading-22px">{data.text}</p>
                 <div className="mt-[30px] mb-8 flex items-center justify-center">
                     <div className="relative">

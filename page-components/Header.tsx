@@ -59,12 +59,12 @@ const Header: FC<NavMenuProps> = ({ headerData, navData, lang: initialLang, soci
                     </ul>
                 </nav>
 
-                <div className="hidden xl:flex items-center w-full max-w-[430px] gap-8">
+                <div className="hidden xl:flex items-center w-full max-w-[430px] 2xl:max-w-[510px] gap-8">
                     <div className="text-end w-[230px]">
                         <p className="font-bold text-[20px]">{headerData.phone}</p>
                         <button className="text-15 text-deep_blue">{headerData.button1}</button>
                     </div>
-                    <Button iconEnabled={false} className="max-w-[200px]">
+                    <Button iconEnabled={false} className="max-w-[200px] 2xl:max-w-[280px]">
                         {headerData.button2}
                     </Button>
                 </div>

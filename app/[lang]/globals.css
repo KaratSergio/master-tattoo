@@ -31,6 +31,7 @@ section {
     .txt-shadow {
         text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.65);
     }
+
     .low-box-shadow {
         box-shadow: 0px 4px 20px 6px rgba(127, 127, 127, 0.15);
     }
@@ -44,110 +45,88 @@ section {
         background: var(--Blue-green-grad, linear-gradient(180deg, #33b7ef 0%, #6ae8d1 100%));
         box-shadow: 0px 2px 15px 0px rgba(132, 146, 166, 0.45);
     }
+
+    .hero-rectangle-bg {
+        background:
+            url('../../public/hero/person_hero.webp') no-repeat,
+            url('../../public/hero/rectangle.svg') no-repeat;
+        background-size:
+            470px 470px,
+            340px 340px;
+        background-position:
+            bottom 62px right -50px,
+            bottom 40px right -60px;
+        overflow: hidden;
+    }
+
+    .hero-bg-svg {
+        background: url('../../public/bg/bg_1.svg'), url('../../public/bg/stroke_1.svg');
+        /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+        background-repeat: no-repeat;
+        background-size:
+            2000px 1010px,
+            2020px 1060px;
+        background-position:
+            top -100px left -70px,
+            top -100px left -80px;
+    }
 }
 
-/* .hover-nav {
-    position: relative;
-    display: inline-block;
-}
-
-.hover-nav::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    background-color: #13c5fc;
-    transition: width 0.3s ease-out;
-}
-
-.hover-nav::before {
-    height: 3px;
-    width: 0%;
-    bottom: -2px;
-}
-
-.hover-nav:hover::before {
-    width: 100%;
-}
-
-.gradient-border {
-    position: relative;
-    display: inline-block;
-}
-
-.gradient-border::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, #71a6d0 0%, #b5d6e5 80%);
-}
-
-.gradient-text {
-    background: linear-gradient(to right, #71a6d0 0%, #b5d6e5 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
-
-.download-underline {
-    position: relative;
-    display: inline-block;
-}
-
-.download-underline::before {
-    content: '';
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: #1686ae;
-}
-
-.download-underline:hover::before {
-    background-color: #13c5fc;
-}
-
-.custom-blur {
-    backdrop-filter: blur(8px);
-} */
-
-.hero-bg {
-    position: relative;
-    background: url('../../public/hero/person_hero.webp') no-repeat;
-    background-size: 470px 470px;
-    background-position: bottom 62px right -50px;
-    overflow: hidden;
-}
 @media (max-width: 480px) {
-    .hero-bg {
-        background-position: bottom 62px right -150px;
+    .hero-rectangle-bg {
+        background-position:
+            bottom 62px right -150px,
+            bottom 40px right -160px;
     }
 }
+
 @media (min-width: 500px) {
-    .hero-bg {
-        background-position: bottom 62px left 60px;
+    .hero-rectangle-bg {
+        background-size:
+            470px 470px,
+            290px 300px;
+        background-position:
+            bottom 62px left 60px,
+            bottom 60px right -10px;
     }
 }
+
 @media (min-width: 1440px) {
-    .hero-bg {
-        background: none;
+    .hero-rectangle-bg {
+        background:
+            none,
+            url('../../public/hero/rectangle.svg') no-repeat;
+        background-size: 460px 460px;
+        background-position: top 108px right 75px;
+        z-index: 10px;
+    }
+    .hero-bg-svg {
+        background: url('../../public/bg/bg_1.svg'), url('../../public/bg/stroke_1.svg');
+        background-repeat: no-repeat;
+        background-size:
+            2000px 1010px,
+            2020px 1060px;
+        background-position:
+            top -270px left -70px,
+            top -280px left -80px;
+        z-index: 0;
+    }
+    .clip-angled {
+        clip-path: polygon(0 0, 100% 0, 94% 94%, 34% 88%);
     }
 }
-/* .hero-bg-stars {
-    background:
-        url('../../public/stars/star.webp') no-repeat,
-        url('../../public/stars/star2.webp') no-repeat,
-        url('../../public/stars/star3.webp') no-repeat;
-    background-size:
-        124px 142px,
-        117px 137px,
-        110px 120px;
-    background-position:`
-        top -14px right,
-        top 4% left 35px,
-        bottom 45% center;
-} */
+
+@media (min-width: 1920px) {
+    .hero-rectangle-bg {
+        background-size: 620px 620px;
+        background-position: top 105px right 250px;
+    }
+    .hero-bg-svg {
+        background-position:
+            top -100px left -70px,
+            top -100px left -80px;
+    }
+    .clip-angled {
+        clip-path: polygon(0 0, 100% 0, 90% 96%, 30% 90%);
+    }
+}
