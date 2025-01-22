@@ -21,6 +21,7 @@ interface ServicesSectionData {
 
 export interface ServiceCardProps {
     serviceCard: ServiceCard;
+    className?: string;
     index: number;
 }
 export interface ServiceListProps {

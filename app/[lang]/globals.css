@@ -135,6 +135,11 @@ section {
     .about-section-grid .block-c {
         grid-area: C;
     }
+
+    .discount-section-bg {
+        background: url('../../public/discount/discount_bg.webp') no-repeat right;
+        background-size: cover;
+    }
 }
 
 @media (min-width: 1920px) {
