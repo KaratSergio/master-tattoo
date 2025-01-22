@@ -58,7 +58,7 @@ const WorkItem: FC<WorkItemProps> = ({ title, text, number }) => {
 
             <div className="flex flex-col justify-end">
                 <H3>{title}</H3>
-                <P>{text}</P>
+                <P className="xl:w-[186px] 2xl:w-[228px]">{text}</P>
             </div>
         </li>
     );
