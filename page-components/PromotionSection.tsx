@@ -21,18 +21,19 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
     } = useForm<FormValues>();
 
     const onSubmit: SubmitHandler<FormValues> = formData => {
-        // Здесь обработка данных формы
         console.log('Form submitted:', formData);
     };
 
     return (
         <section className="mt-[60px]">
-            <div className="container mx-auto px-4">
-                <div className="relative w-full max-w-lg mx-auto">
-                    <h2 className="absolute w-24 text-white top-16 left-10 text-4xl font-bold">
+            <div className="relative container xl:flex xl:flex-row-reverse">
+                <div className="w-full max-w-lg xl:max-w-[640px] 2xl:max-w-[815px] flex-shrink-0">
+                    <h2 className="absolute w-24 xl:w-96 text-white xl:text-dark_a top-16 xl:top-24 left-10 xl:left-[176px] 2xl:left-[345px] text-4xl font-bold">
                         {data.title}
                     </h2>
-                    <H3 className="absolute text-white top-8 left-10">{data.text}</H3>
+                    <H3 className="absolute text-white xl:text-dark_a top-8 xl:top-16 left-10 xl:left-[176px] 2xl:left-[346px]">
+                        {data.text}
+                    </H3>
 
                     <Image
                         src={data.image.url}
@@ -41,15 +42,17 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                         height={574}
                         quality={90}
                         sizes="(max-width: 768px) 100vw, 815px"
-                        className="rounded-t-2xl object-cover object-end"
+                        className="rounded-t-2xl  xl:rounded-tl-none xl:rounded-r-2xl  object-cover w-full h-full"
                     />
                 </div>
 
-                <div className="bg-a_gradient px-3 pt-10 pb-12 rounded-b-2xl">
-                    <p className="text-lg text-gray-700">{data.text1}</p>
+                <div className="bg-a_gradient px-3 xl:pl-[111px] 2xl:pl-[151px] xl:pr-[168px] xl:pt-[160px] pt-10 pb-12 xl:pb-10 rounded-b-2xl xl:rounded-b-none xl:rounded-l-2xl">
+                    <p className="text-[15px] 2xl:text-base 2xl:w-[439px] text-gray-700">
+                        {data.text1}
+                    </p>
                     <form
                         onSubmit={handleSubmit(onSubmit)}
-                        className="mt-8 flex flex-col items-center"
+                        className="mt-8 flex flex-col items-center 2xl:items-start"
                     >
                         <div>
                             <input
@@ -57,7 +60,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                                 placeholder="Ім'я"
                                 type="text"
                                 {...register('name', { required: "Введіть ваше ім'я" })}
-                                className="p-[10px] block w-[295px] rounded-md border-gray-300 shadow-sm focus:outline-none"
+                                className="p-[10px] block w-[295px] xl:w-[381px] 2xl:w-[439px] rounded-md border-gray-300 shadow-sm focus:outline-none"
                             />
                             {errors.name && (
                                 <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -69,7 +72,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                                 type="text"
                                 placeholder="Телефон"
                                 {...register('phone', { required: 'Введіть номер телефону' })}
-                                className="mt-[10px] mb-[30px] p-[10px] block w-[295px] rounded-md border-gray-300 shadow-sm focus:outline-none"
+                                className="mt-[10px] mb-[30px] p-[10px] block w-[295px] xl:w-[381px] 2xl:w-[439px] rounded-md border-gray-300 shadow-sm focus:outline-none"
                             />
                             {errors.phone && (
                                 <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
@@ -80,7 +83,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                             variant="deep-blue"
                             iconEnabled={false}
                             type="submit"
-                            className="w-full"
+                            className="w-full 2xl:w-[439px]"
                         >
                             {data.button}
                         </Button>
@@ -89,7 +92,10 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                         )}
                     </form>
 
-                    <Markdown className="mt-6 text-[12px] text-white" text={data.agreement} />
+                    <Markdown
+                        className="mt-6 text-[12px] 2xl:w-[360px] text-white"
+                        text={data.agreement}
+                    />
                 </div>
             </div>
         </section>

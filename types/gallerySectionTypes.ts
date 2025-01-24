@@ -12,6 +12,7 @@ interface GallerySectionData {
 
 export interface GalleryCardProps {
     picture: Image;
+    className?: string;
 }
 export interface GalleryListProps {
     gallery: Image[];

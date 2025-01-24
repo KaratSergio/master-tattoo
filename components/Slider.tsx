@@ -8,9 +8,15 @@ interface SliderProps {
     children: ReactNode[];
     hideButtons?: boolean;
     className?: string;
+    slidesToShow?: number;
 }
 
-const Slider: FC<SliderProps> = ({ children, className, hideButtons = false }) => {
+const Slider: FC<SliderProps> = ({
+    children,
+    className,
+    hideButtons = false,
+    slidesToShow = 1,
+}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     // for mobile swipe
     const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -57,12 +63,16 @@ const Slider: FC<SliderProps> = ({ children, className, hideButtons = false }) =
             <div
                 className="flex transition-transform duration-300"
                 style={{
-                    transform: `translateX(-${currentIndex * 100}%)`,
-                    width: `${children.length * 100}%`,
+                    transform: `translateX(-${(currentIndex * 100) / slidesToShow}%)`,
+                    width: `${(children.length * 50) / slidesToShow}%`,
                 }}
             >
                 {children.map((child, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
+                    <div
+                        key={index}
+                        className="w-full flex-shrink-0"
+                        style={{ width: `${100 / slidesToShow}%` }}
+                    >
                         {child}
                     </div>
                 ))}

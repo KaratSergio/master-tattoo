@@ -9,7 +9,7 @@ import WorkStage from '@/components/forWorkSection/WorkStage/StageList';
 const WorkSection: FC<WorkSectionProps> = ({ data }) => {
     return (
         <section>
-            <div className="container mt-[60px] rounded-b-2xl">
+            <div className="container mt-[60px] xl:mt-[90px] rounded-b-2xl">
                 {/* WORK LIST */}
                 <div>
                     <H2 variant="title-section">{data.title}</H2>
@@ -18,7 +18,7 @@ const WorkSection: FC<WorkSectionProps> = ({ data }) => {
                 {/* WORK STAGE */}
                 <div className="xl:px-[30px] 2xl:px-[55px]">
                     <div className="mt-[60px] rounded-b-2xl xl:rounded-b-none xl:rounded-r-2xl low-box-shadow xl:flex xl:gap-10">
-                        <div className="relative w-full max-[335px] max-h-[219px] xl:max-h-full overflow-hidden rounded-t-2xl xl:rounded-l-2xl xl:rounded-t-none">
+                        <div className="relative w-full max-[335px] max-h-[219px] xl:max-h-full overflow-hidden rounded-t-2xl xl:rounded-l-2xl xl:rounded-tr-none">
                             <Image
                                 src={data.image.url}
                                 alt={data.image.alt}

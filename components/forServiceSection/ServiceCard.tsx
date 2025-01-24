@@ -83,7 +83,9 @@ const ServiceCard: FC<ServiceCardProps> = ({ serviceCard, index, className }) =>
                 </div>
 
                 <div className="flex flex-col xl:flex-row xl:justify-between">
-                    <p className="mt-[30px] text-xl font-medium leading-7">{serviceCard.price}</p>
+                    <p className="mt-[30px] xl:mt-[60px] text-xl font-medium leading-7">
+                        {serviceCard.price}
+                    </p>
                     <LinkBtn to="#" className="mt-[30px] pr-12 xl:max-w-fit xl:px-16">
                         {serviceCard.button}
                     </LinkBtn>

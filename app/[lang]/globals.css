@@ -144,6 +144,16 @@ section {
         background: url('../../public/discount/discount_bg.webp') no-repeat right;
         background-size: cover;
     }
+
+    .column-1 {
+        grid-column: 1;
+        margin-top: 100px;
+    }
+
+    .column-3 {
+        grid-column: 3;
+        margin-top: 60px;
+    }
 }
 
 @media (min-width: 1920px) {
