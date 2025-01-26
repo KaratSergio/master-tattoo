@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { H3 } from '@/components/typography/H3';
 import { P } from '@/components/typography/P';
 import { WorkItemProps } from '@/types/workSectionTypes';
-import { Ellipse } from '@/components/icons/ellipse/Ellipse';
+import { Ellipse } from '@/components/icons/Ellipse_temp/Ellipse';
 
 const WorkItem: FC<WorkItemProps> = ({ title, text, number }) => {
     // Об'єкт визначення класів з урахуванням значення `number`

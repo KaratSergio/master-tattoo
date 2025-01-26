@@ -5,9 +5,9 @@ import { H2 } from '../typography/H2';
 import { Markdown } from '../Markdown';
 import { ServiceCardProps } from '@/types/servicesSectionTypes';
 
-import { EllipseBlue } from '../icons/ellipse/serviceSection/EllipseBlue';
-import { EllipseGreen } from '../icons/ellipse/serviceSection/EllipseGreen';
-import { EllipseSky } from '../icons/ellipse/serviceSection/EllipseSky';
+import { EllipseBlue } from '../icons/Ellipse_temp/serviceSection/EllipseBlue';
+import { EllipseGreen } from '../icons/Ellipse_temp/serviceSection/EllipseGreen';
+import { EllipseSky } from '../icons/Ellipse_temp/serviceSection/EllipseSky';
 
 const ServiceCard: FC<ServiceCardProps> = ({ serviceCard, index, className }) => {
     const imageClasses = [

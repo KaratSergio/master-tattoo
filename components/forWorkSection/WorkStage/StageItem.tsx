@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { StageItemProps } from '@/types/workSectionTypes';
 import { H3 } from '@/components/typography/H3';
 import { P } from '@/components/typography/P';
-import { EllipseList } from '@/components/icons/ellipse/EllipseList';
+import { EllipseList } from '@/components/icons/Ellipse_temp/EllipseList';
 
 const StageItem: FC<StageItemProps> = ({ title, text, titleList }) => {
     const [firstWord, secondWord] = titleList.split(' ');

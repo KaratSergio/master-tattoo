@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/Button';
 import { HeroSectionProps } from '@/types/heroSectionTypes';
 
-import { Ellipse } from '@/components/icons/ellipse/Ellipse';
+import { Ellipse } from '@/components/icons/Ellipse_temp/Ellipse';
 
 const HeroSection: FC<HeroSectionProps> = ({ data }) => {
     return (

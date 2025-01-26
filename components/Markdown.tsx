@@ -9,7 +9,7 @@ import { H3 } from './typography/H3';
 import { TextColor, TextType } from '@/types/textTypes';
 import { H4 } from './typography/H4';
 
-import { EllipseList } from '@/components/icons/ellipse/EllipseList';
+import { EllipseList } from '@/components/icons/Ellipse_temp/EllipseList';
 
 interface InterfaceMarkdown {
     text: string;

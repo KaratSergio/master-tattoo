@@ -4,7 +4,7 @@ import { H3 } from '../typography/H3';
 import { P } from '../typography/P';
 import { ToolCardProps } from '@/types/toolsSectionTypes';
 
-import { EllipseTools } from '@/components/icons/ellipse/toolsSection/EllipseTools';
+import { EllipseTools } from '@/components/icons/Ellipse_temp/toolsSection/EllipseTools';
 
 const ToolCard: FC<ToolCardProps> = ({ tool, className }) => {
     return (
