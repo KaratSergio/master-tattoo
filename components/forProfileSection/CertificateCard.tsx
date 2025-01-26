@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { CertificateCardProps } from '@/types/profileSectionTypes';
 import { H3 } from '../typography/H3';
 
-const CertificateCard: FC<CertificateCardProps> = ({ text, image }) => {
+const CertificateCard: FC<CertificateCardProps> = ({ text, image, className }) => {
     return (
-        <li>
+        <li className={`${className}`}>
             <H3 className="mb-5">{text}</H3>
             <Image
                 src={image.url}

@@ -40,6 +40,10 @@ section {
         box-shadow: 0px 4px 20px 6px rgba(127, 127, 127, 0.15);
     }
 
+    .profile-box-shadow {
+        box-shadow: 0px 4px 20px 6px rgba(127, 127, 127, 0.15);
+    }
+
     .custom-rounded {
         border-radius: 130px 90px 130px 90px;
     }
@@ -153,6 +157,10 @@ section {
     .column-3 {
         grid-column: 3;
         margin-top: 60px;
+    }
+
+    .profile-box-shadow {
+        box-shadow: none;
     }
 }
 

@@ -29,12 +29,11 @@ const Footer: FC<FooterProps> = ({ data }) => {
                 <p className="text-center text-[20px] font-bold">{data.phone}</p>
 
                 <SocialLinkList social={data.social} />
-
-                <div className="w-full flex flex-col text-center border-t-2 border-t-white pt-[50px] mt-[50px]">
-                    <p>{data.text1}</p>
-                    <p className="text-dark_gray text-[15px]">{data.text2}</p>
-                    <p className="text-dark_gray mt-10 text-[13px]">{data.text3}</p>
-                </div>
+            </div>
+            <div className="w-full flex flex-col text-center border-t-2 border-t-white pt-[50px] mt-[50px]">
+                <p>{data.text1}</p>
+                <p className="text-dark_gray text-[15px]">{data.text2}</p>
+                <p className="text-dark_gray mt-10 text-[13px]">{data.text3}</p>
             </div>
         </footer>
     );

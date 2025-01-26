@@ -9,6 +9,7 @@ interface SubscribeSectionData {
     button1: string;
     button2: string;
     image: Image;
+    imageIcon: Image;
 }
 
 export interface SubscribeSectionProps {

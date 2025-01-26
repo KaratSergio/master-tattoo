@@ -170,6 +170,10 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                     alt
                     url
                 }
+                imageIcon {
+                    alt
+                    url
+                }
             }
             contactsSection(locale: uk) {
                 title

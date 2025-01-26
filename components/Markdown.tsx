@@ -16,26 +16,16 @@ interface InterfaceMarkdown {
     className?: string;
     pType?: TextType;
     pColor?: TextColor;
-    xlTextSize?: 'lg' | 'base';
     strong?: string;
 }
 
-export const Markdown: FC<InterfaceMarkdown> = ({
-    text,
-    className,
-    pType,
-    pColor,
-    xlTextSize = 'lg',
-    strong,
-}) => {
-    const xlClass = xlTextSize === 'lg' ? 'xl:text-lg' : 'xl:text-base';
-
+export const Markdown: FC<InterfaceMarkdown> = ({ text, className, pType, pColor, strong }) => {
     return (
         <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
                 p: props => (
-                    <P className={cn(className, xlClass)} type={pType} color={pColor}>
+                    <P className={cn(className)} type={pType} color={pColor}>
                         {props.children}
                     </P>
                 ),

@@ -81,10 +81,16 @@ const Slider: FC<SliderProps> = ({
             {/* Кнопки навиігації */}
             {!hideButtons && (
                 <>
-                    <button onClick={handlePrev} className="absolute right-14 top-[-1px]">
+                    <button
+                        onClick={handlePrev}
+                        className="absolute right-14 top-[-1px] xl:top-4 xl:left-[220px]"
+                    >
                         <ArrowLeft className="" />
                     </button>
-                    <button onClick={handleNext} className="absolute right-2 top-[-1px]">
+                    <button
+                        onClick={handleNext}
+                        className="absolute right-2 top-[-1px] xl:top-4 xl:left-[270px]"
+                    >
                         <ArrowRight className="" />
                     </button>
                 </>
