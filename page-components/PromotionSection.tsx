@@ -60,7 +60,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                                 placeholder="Ім'я"
                                 type="text"
                                 {...register('name', { required: "Введіть ваше ім'я" })}
-                                className="p-[10px] block w-[295px] xl:w-[381px] 2xl:w-[439px] rounded-md border-gray-300 shadow-sm focus:outline-none"
+                                className="p-[10px] block w-full sm:w-[295px] xl:w-[381px] 2xl:w-[439px] rounded-md border-gray-300 shadow-sm focus:outline-none"
                             />
                             {errors.name && (
                                 <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -72,7 +72,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                                 type="text"
                                 placeholder="Телефон"
                                 {...register('phone', { required: 'Введіть номер телефону' })}
-                                className="mt-[10px] mb-[30px] p-[10px] block w-[295px] xl:w-[381px] 2xl:w-[439px] rounded-md border-gray-300 shadow-sm focus:outline-none"
+                                className="mt-[10px] mb-[30px] p-[10px] block w-full sm:w-[295px] xl:w-[381px] 2xl:w-[439px] rounded-md border-gray-300 shadow-sm focus:outline-none"
                             />
                             {errors.phone && (
                                 <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>

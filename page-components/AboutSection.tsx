@@ -10,7 +10,7 @@ import { Arrows } from '@/components/icons/arrows/Arrows';
 
 const AboutSection: FC<AboutSectionProps> = ({ data }) => {
     return (
-        <section>
+        <section id="about">
             <div className="container about-section-grid">
                 {/* A */}
                 <div className="block-a">
@@ -52,7 +52,7 @@ const AboutSection: FC<AboutSectionProps> = ({ data }) => {
                 {/* C */}
                 <div className="block-c xl:mt-[60px] 2xl:mt-[10px]">
                     <Markdown
-                        className="mt-[15px] xl:mt-6 w-[310px] xl:w-full 2xl:text-lg font-medium leading-25px"
+                        className="mt-[15px] xl:mt-6 w-full max-w-[310px] xl:max-w-full 2xl:text-lg font-medium leading-25px"
                         text={data.list}
                     />
                 </div>

@@ -17,7 +17,7 @@ const WorkSection: FC<WorkSectionProps> = ({ data }) => {
                 </div>
                 {/* WORK STAGE */}
                 <div className="xl:px-[30px] 2xl:px-[55px]">
-                    <div className="mt-[60px] rounded-b-2xl xl:rounded-b-none xl:rounded-r-2xl low-box-shadow xl:flex xl:gap-10">
+                    <div className="mt-[100px] rounded-b-2xl xl:rounded-b-none xl:rounded-r-2xl low-box-shadow xl:flex xl:gap-10">
                         <div className="relative w-full max-[335px] max-h-[219px] xl:max-h-full overflow-hidden rounded-t-2xl xl:rounded-l-2xl xl:rounded-tr-none">
                             <Image
                                 src={data.image.url}
@@ -34,7 +34,7 @@ const WorkSection: FC<WorkSectionProps> = ({ data }) => {
                                 {data.titleStage}
                             </H2>
                         </div>
-                        <div className="mt-[60px]">
+                        <div>
                             <WorkStage workStage={data.workStage} button={data.button} />
                         </div>
                     </div>

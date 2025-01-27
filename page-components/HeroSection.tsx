@@ -8,7 +8,7 @@ import { Ellipse } from '@/components/icons/ellipse/Ellipse';
 const HeroSection: FC<HeroSectionProps> = ({ data }) => {
     return (
         <section className="pb-[110px]">
-            <div className="hero-rectangle-bg container xl:px-[135px] w-full min-w-[375px] flex flex-col xl:flex-row">
+            <div className="hero-rectangle-bg container xl:px-[135px] w-full min-w-[320px] flex flex-col xl:flex-row">
                 <div className="xl:w-[745px]">
                     <h1 className="mt-[61px] w-[300px] xl:w-full 2xl:w-[600px] text-[28px] xl:text-[40px] 2xl:text-[50px] font-bold leading-8 xl:leading-[50px] 2xl:leading-[60px] txt-shadow">
                         {data.title}

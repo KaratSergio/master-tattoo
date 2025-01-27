@@ -6,7 +6,7 @@ import { CommentProps } from '@/types/reviewsSectionTypes';
 
 const Comment: FC<CommentProps> = ({ title, text, image }) => {
     return (
-        <li className="items-center w-[330px] sm:w-[420px] xl:w-[640px]  xl:flex xl:gap-12">
+        <li className="items-center w-full max-w-[290px] sm:max-w-[420px] xl:max-w-[640px]  xl:flex xl:gap-12">
             <div className="hidden xl:flex overflow-hidden rounded-full w-[157px] h-[157px] flex-shrink-0">
                 <Image
                     src={image.url}

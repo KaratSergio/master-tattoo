@@ -5,7 +5,7 @@ import { ReviewsSectionProps } from '@/types/reviewsSectionTypes';
 
 const ReviewsSection: FC<ReviewsSectionProps> = ({ data }) => {
     return (
-        <section>
+        <section id="reviews">
             <div className="container relative mt-[60px] xl:mt-[90px]">
                 <H2
                     variant="title-section"

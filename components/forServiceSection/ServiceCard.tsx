@@ -53,11 +53,11 @@ const ServiceCard: FC<ServiceCardProps> = ({ serviceCard, index, className }) =>
     return (
         <li
             key={serviceCard.id}
-            className={`relative flex flex-col xl:flex-row w-full max-w-[333px] xl:max-w-full px-5 xl:px-[60px] py-10 ${className}`}
+            className={`relative flex flex-col xl:flex-row w-full max-w-[290px] xl:max-w-full px-5 xl:px-[60px] py-10 ${className}`}
         >
             {renderBackground()}
 
-            <div className="w-[314px] xl:w-[460px] flex-shrink-0">
+            <div className="w-full max-w-[314px] xl:w-[460px] flex-shrink-0">
                 <Image
                     src={serviceCard.image.url}
                     alt={serviceCard.image.alt}
@@ -86,7 +86,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ serviceCard, index, className }) =>
                     <p className="mt-[30px] xl:mt-[60px] text-xl font-medium leading-7">
                         {serviceCard.price}
                     </p>
-                    <LinkBtn to="#" className="mt-[30px] pr-12 xl:max-w-fit xl:px-16">
+                    <LinkBtn to="#" className="mt-[30px] pr-12 w-full xl:max-w-fit xl:px-16">
                         {serviceCard.button}
                     </LinkBtn>
                 </div>

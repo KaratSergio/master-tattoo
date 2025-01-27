@@ -15,7 +15,7 @@ import { WhatsApp } from '@/components/icons/contacts/WhatsApp';
 
 const ContactsSection: FC<ContactsSectionProps> = ({ data }) => {
     return (
-        <section>
+        <section id="contacts">
             <div className="container mt-[60px] pb-[50px]">
                 <H2 variant="title-section">{data.title}</H2>
                 <ul className="mt-10 flex flex-col gap-5">

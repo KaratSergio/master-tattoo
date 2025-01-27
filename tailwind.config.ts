@@ -8,7 +8,7 @@ export default {
     ],
     theme: {
         screens: {
-            // xs: '375px',
+            xs: '320px',
             sm: '480px',
             xl: '1440px',
             '2xl': '1920px',
@@ -23,6 +23,7 @@ export default {
                 center: true,
                 padding: {
                     DEFAULT: '20px',
+                    xs: '15px',
                     sm: '20px',
                     xl: '70px',
                     '2xl': '135px',
@@ -35,6 +36,7 @@ export default {
                 dark_gray: '#CBCFD4',
                 sky_blue: '#33B7EF',
                 deep_blue: '#428DFF',
+                sea_green: '#6AE8D1',
             },
             lineHeight: {
                 '10px': '10px',
