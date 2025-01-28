@@ -7,6 +7,7 @@ import { PromotionSectionProps } from '@/types/promotionSectionTypes';
 import { H3 } from '@/components/typography/H3';
 import { Button } from '@/components/Button';
 import { Markdown } from '@/components/Markdown';
+import { Ellipse } from '@/components/icons/ellipse/Ellipse';
 
 interface FormValues {
     name: string;
@@ -97,6 +98,10 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                         text={data.agreement}
                     />
                 </div>
+                <Ellipse className="hidden xl:block low-box-shadow rounded-full size-12 xl:size-20 text-white absolute top-[-28px] left-24 2xl:left-[240px]" />
+                <Ellipse className="hidden xl:block low-box-shadow rounded-full size-4 xl:size-4 text-white absolute top-6 xl:top-1 left-16 xl:left-48 2xl:left-[340px]" />
+                <Ellipse className="low-box-shadow rounded-full size-10 xl:size-[60px] text-white absolute bottom-[-20px] xl:right-[800px] 2xl:right-[1000px] right-12" />
+                <Ellipse className="low-box-shadow rounded-full size-3 xl:size-6 text-white absolute bottom-2 right-24 xl:right-[890px] 2xl:right-[1080px]" />
             </div>
         </section>
     );

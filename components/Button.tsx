@@ -19,7 +19,7 @@ export const Button: FC<ButtonProps> = ({
     return (
         <button
             className={cn(
-                'w-full flex items-center justify-center gap-2 rounded-[10px] py-[15px] pl-[17px] pr-[17px] text-[15px] low-box-shadow font-bold leading-5 uppercase',
+                'w-full flex items-center justify-center gap-2 rounded-[10px] py-[15px] pl-[17px] pr-[17px] text-sm sm:text-[15px] low-box-shadow font-bold leading-5 uppercase',
                 {
                     'text-white bg-a_gradient': variant === 'primary',
                     'text-deep_blue bg-white': variant === 'deep-blue',
