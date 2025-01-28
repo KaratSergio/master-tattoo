@@ -29,7 +29,7 @@ const SubscribeSection: FC<SubscribeSectionProps> = ({ data }) => {
                             width={30}
                             height={30}
                             quality={90}
-                            className="hidden xl:block size-6 xl:size-8 2xl:size-10 absolute xl:right-20 2xl:right-5 xl:top-[45px] 2xl:top-[68px]"
+                            className="hidden xl:block size-6 xl:size-8 2xl:size-10 absolute xl:right-12 2xl:right-[-10px] xl:top-[45px] 2xl:top-[68px]"
                         />
                     </div>
                     <P className="xl:w-[620px]">{data.text}</P>
