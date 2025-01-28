@@ -71,6 +71,37 @@ section {
             top -100px left -70px,
             top -100px left -80px;
     }
+
+    .main-bg-svg {
+        background: url('../../public/bg/bg_2.svg'), url('../../public/bg/stroke_2.svg'),
+            url('../../public/bg/stroke_3.svg'), url('../../public/bg/bg_3.svg'),
+            url('../../public/bg/bg_4.svg'), url('../../public/bg/stroke_4.svg'),
+            url('../../public/bg/bg_5.svg'), url('../../public/bg/stroke_5.svg'),
+            url('../../public/bg/bg_6.svg'), url('../../public/bg/stroke_6.svg');
+        background-repeat: no-repeat;
+        background-size:
+            2000px 1410px,
+            2020px 1460px,
+            2000px 2990px,
+            2020px 2860px,
+            2000px 1010px,
+            2020px 1060px,
+            2000px 1010px,
+            2020px 1060px,
+            2000px 1010px,
+            2020px 1060px;
+        background-position:
+            top 1060px left -1180px,
+            top 1045px left -1220px,
+            top 3300px right -1170px,
+            top 3360px right -1220px,
+            top 6280px right -670px,
+            top 6260px right -680px,
+            bottom -800px left -870px,
+            bottom -800px left -880px,
+            bottom 500px left -70px,
+            bottom 500px left -80px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -88,6 +119,7 @@ section {
 
 @media (min-width: 1440px) {
     .hero-rectangle-bg {
+        background: url('../../public/hero/rectangle.svg') no-repeat;
         background-size: 460px 460px;
         background-position: top 108px right 75px;
         z-index: 10px;
@@ -145,6 +177,37 @@ section {
 
     .profile-box-shadow {
         box-shadow: none;
+    }
+
+    .main-bg-svg {
+        background: url('../../public/bg/stroke_2.svg'), url('../../public/bg/bg_2.svg'),
+            url('../../public/bg/stroke_3.svg'), url('../../public/bg/bg_3.svg'),
+            url('../../public/bg/bg_4.svg'), url('../../public/bg/stroke_4.svg'),
+            url('../../public/bg/bg_5.svg'), url('../../public/bg/stroke_5.svg'),
+            url('../../public/bg/bg_6.svg'), url('../../public/bg/stroke_6.svg');
+        background-repeat: no-repeat;
+        background-size:
+            2000px 1010px,
+            2020px 1060px,
+            2000px 2990px,
+            2020px 2860px,
+            2000px 1810px,
+            2020px 1860px,
+            2000px 1010px,
+            2020px 1060px,
+            2000px 1010px,
+            2020px 1060px;
+        background-position:
+            top 1220px left -230px,
+            top 1185px left -280px,
+            top 2520px right -940px,
+            top 2600px right -1020px,
+            top 4680px left -270px,
+            top 4660px left -280px,
+            bottom 1200px right -270px,
+            bottom 1200px right -280px,
+            bottom 20px left -70px,
+            bottom 20px left -80px;
     }
 }
 

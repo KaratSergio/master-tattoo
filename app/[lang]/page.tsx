@@ -201,7 +201,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
     });
 
     return (
-        <main className="flex flex-col flex-grow justify-between">
+        <main className="main-bg-svg flex flex-col flex-grow justify-between">
             <HeroSection data={data.heroSection} />
             <AboutSection data={data.aboutSection} />
             <DiscountSection data={data.discountSection} />

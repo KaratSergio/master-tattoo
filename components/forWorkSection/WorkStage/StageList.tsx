@@ -5,7 +5,7 @@ import { Button } from '@/components/Button';
 
 const StageList: FC<StageListProps> = ({ workStage, button }) => {
     return (
-        <ul className="px-5 xl:pr-20 pb-[50px] xl:py-[70px] 2xl:py-[100px] xl:flex flex-col xl:gap-10 2xl:gap-20">
+        <ul className="bg-white px-5 rounded-b-2xl xl:pr-20 pb-[50px] xl:py-[70px] 2xl:py-[100px] xl:flex flex-col xl:gap-10 2xl:gap-20">
             {workStage.map((stage, index) => (
                 <div key={stage.id}>
                     <StageItem {...stage} index={index} />
