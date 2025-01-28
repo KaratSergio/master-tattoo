@@ -8,8 +8,13 @@ import GalleryList from '@/components/forGallerySection/GalleryList';
 const GallerySection: FC<GallerySectionProps> = ({ data }) => {
     return (
         <section id="portfolio">
-            <div className="container mt-4 xl:relative xl:mt-[60px]">
-                <H2 variant="title-section">{data.title}</H2>
+            <div className="container relative mt-4 xl:relative xl:mt-[60px]">
+                <H2
+                    variant="title-section"
+                    className="absolute xl:relative top-[-4px] xl:top-0 left-4 xl:left-0"
+                >
+                    {data.title}
+                </H2>
                 <GalleryList gallery={data.gallery} />
                 <Link
                     href="#"

@@ -6,7 +6,7 @@ import { GalleryListProps } from '@/types/gallerySectionTypes';
 const GalleryList: FC<GalleryListProps> = ({ gallery }) => {
     return (
         <ul className="xl:grid xl:grid-cols-4">
-            <Slider hideButtons className="pt-0 xl:hidden">
+            <Slider className="pt-0 xl:hidden">
                 {gallery.map(picture => (
                     <GalleryCard key={picture.id} picture={picture} />
                 ))}

@@ -83,13 +83,13 @@ const Slider: FC<SliderProps> = ({
                 <>
                     <button
                         onClick={handlePrev}
-                        className="absolute right-14 top-[-1px] xl:top-4 xl:left-[220px]"
+                        className="absolute right-14 top-[-1px] xl:top-0 xl:left-[220px]"
                     >
                         <ArrowLeft className="" />
                     </button>
                     <button
                         onClick={handleNext}
-                        className="absolute right-2 top-[-1px] xl:top-4 xl:left-[270px]"
+                        className="absolute right-2 top-[-1px] xl:top-0 xl:left-[270px]"
                     >
                         <ArrowRight className="" />
                     </button>

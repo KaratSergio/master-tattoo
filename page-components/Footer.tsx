@@ -25,7 +25,7 @@ const Footer: FC<FooterProps> = ({ data }) => {
                 </div>
                 <Button
                     variant="sky-white"
-                    className="my-10 justify-center pl-5 xl:px-10 xl:max-w-fit"
+                    className="my-10 xl:my-0 justify-center pl-5 xl:px-10 xl:max-w-fit"
                 >
                     {data.button}
                 </Button>
@@ -34,12 +34,12 @@ const Footer: FC<FooterProps> = ({ data }) => {
                     <SocialLinkList social={data.social} />
                 </div>
             </div>
-            <div className="w-full flex flex-col xl:flex-row xl:justify-between xl:items-center text-center xl:text-start border-t-2 border-b-none border-t-white pt-[50px] mt-[50px] xl:pb-10">
+            <div className="w-full flex flex-col xl:flex-row xl:justify-between xl:items-center text-center xl:text-start border-t-2 border-b-none border-t-white pt-[50px] xl:pb-10">
                 <div className="px-4 xl:pl-[70px] 2xl:pl-[135px]">
                     <p>{data.text1}</p>
                     <p className="text-dark_gray text-[15px]">{data.text2}</p>
                 </div>
-                <p className="px-4 text-dark_gray mt-10 xl:mt-0 text-[13px] xl:w-[380px] 2xl:w-[445px] xl:pr-[70px] 2xl:pr-[135px]">
+                <p className="px-4 pb-4 xl:pb-0 text-dark_gray mt-10 xl:mt-0 text-[13px] xl:w-[380px] 2xl:w-[445px] xl:pr-[70px] 2xl:pr-[135px]">
                     {data.text3}
                 </p>
             </div>
