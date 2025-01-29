@@ -2,26 +2,14 @@
 
 import { FC } from 'react';
 import Image from 'next/image';
-import { useForm, SubmitHandler } from 'react-hook-form';
 import { PromotionSectionProps } from '@/types/promotionSectionTypes';
 import { H3 } from '@/components/typography/H3';
-import { Button } from '@/components/Button';
 import { Markdown } from '@/components/Markdown';
 import { Ellipse } from '@/components/icons/ellipse/Ellipse';
-
-interface FormValues {
-    name: string;
-    phone: string;
-}
+import { FormContact } from '@/components/forms/FormContact';
 
 const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm<FormValues>();
-
-    const onSubmit: SubmitHandler<FormValues> = formData => {
+    const handleSubmit = (formData: { name: string; phone: string }) => {
         console.log('Form submitted:', formData);
     };
 
@@ -43,7 +31,7 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                         height={574}
                         quality={90}
                         sizes="(max-width: 768px) 100vw, 815px"
-                        className="rounded-t-2xl  xl:rounded-tl-none xl:rounded-r-2xl  object-cover w-full h-full flex-shrink-0"
+                        className="rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl object-cover w-full h-full flex-shrink-0"
                     />
                 </div>
 
@@ -51,47 +39,12 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                     <p className="text-[15px] 2xl:text-base 2xl:w-[439px] text-gray-700">
                         {data.text1}
                     </p>
-                    <form
-                        onSubmit={handleSubmit(onSubmit)}
-                        className="mt-8 flex flex-col items-center 2xl:items-start"
-                    >
-                        <div>
-                            <input
-                                id="name"
-                                placeholder="Ім'я"
-                                type="text"
-                                {...register('name', { required: "Введіть ваше ім'я" })}
-                                className="p-[10px] block w-full sm:w-[295px] xl:w-[381px] 2xl:w-[439px] rounded-md border-gray-300 shadow-sm focus:outline-none"
-                            />
-                            {errors.name && (
-                                <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
-                            )}
-                        </div>
-                        <div>
-                            <input
-                                id="phone"
-                                type="text"
-                                placeholder="Телефон"
-                                {...register('phone', { required: 'Введіть номер телефону' })}
-                                className="mt-[10px] mb-[30px] p-[10px] block w-full sm:w-[295px] xl:w-[381px] 2xl:w-[439px] rounded-md border-gray-300 shadow-sm focus:outline-none"
-                            />
-                            {errors.phone && (
-                                <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
-                            )}
-                        </div>
 
-                        <Button
-                            variant="deep-blue"
-                            iconEnabled={false}
-                            type="submit"
-                            className="w-full 2xl:w-[439px]"
-                        >
-                            {data.button}
-                        </Button>
-                        {data.buttonError && (
-                            <p className="text-red-500 text-center mt-4">{data.buttonError}</p>
-                        )}
-                    </form>
+                    <FormContact
+                        buttonText={data.button}
+                        buttonError={data.buttonError}
+                        onSubmit={handleSubmit}
+                    />
 
                     <Markdown
                         className="mt-6 text-[12px] 2xl:w-[360px] text-white"
