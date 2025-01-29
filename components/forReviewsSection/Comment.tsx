@@ -22,7 +22,7 @@ const Comment: FC<CommentProps> = ({ title, text, image }) => {
                 <EllipseList className="hidden xl:block size-1 absolute bottom-6 right-2" />
             </div>
             <div>
-                <H3>{title}</H3>
+                <H3 className="mb-2">{title}</H3>
                 <P>{text}</P>
             </div>
         </li>

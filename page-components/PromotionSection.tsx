@@ -43,11 +43,11 @@ const PromotionSection: FC<PromotionSectionProps> = ({ data }) => {
                         height={574}
                         quality={90}
                         sizes="(max-width: 768px) 100vw, 815px"
-                        className="rounded-t-2xl  xl:rounded-tl-none xl:rounded-r-2xl  object-cover w-full h-full"
+                        className="rounded-t-2xl  xl:rounded-tl-none xl:rounded-r-2xl  object-cover w-full h-full flex-shrink-0"
                     />
                 </div>
 
-                <div className="bg-a_gradient px-3 xl:pl-[111px] 2xl:pl-[151px] xl:pr-[168px] xl:pt-[160px] pt-10 pb-12 xl:pb-10 rounded-b-2xl xl:rounded-b-none xl:rounded-l-2xl">
+                <div className="bg-a_gradient px-3 sm:px-8 xl:pl-[111px] 2xl:pl-[151px] xl:pr-[168px] xl:pt-[160px] pt-10 pb-12 xl:pb-10 rounded-b-2xl xl:rounded-b-none xl:rounded-l-2xl">
                     <p className="text-[15px] 2xl:text-base 2xl:w-[439px] text-gray-700">
                         {data.text1}
                     </p>

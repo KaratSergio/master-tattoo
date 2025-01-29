@@ -53,7 +53,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ serviceCard, index, className }) =>
     return (
         <li
             key={serviceCard.id}
-            className={`relative bg-white flex flex-col xl:flex-row w-full max-w-[290px] xl:max-w-full px-5 xl:px-[60px] py-10 ${className}`}
+            className={`relative bg-white flex flex-col xl:flex-row w-full max-w-[290px] sm:max-w-[440px] xl:max-w-full px-5 xl:px-[60px] py-10 ${className}`}
         >
             {renderBackground()}
 
