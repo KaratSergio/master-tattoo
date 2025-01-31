@@ -17,7 +17,8 @@ export const FormPopup: FC = () => {
                         Записатися на консультацію
                     </h2>
                     <p className="text-[15px] my-10">
-                        Залишіть свої контактні дані і я зв'яжуся <br /> з вами у найкоротший термін
+                        Залишіть свої контактні дані і я зв&apos;яжуся <br /> з вами у найкоротший
+                        термін
                     </p>
                     <FormContact
                         buttonText="Залишити заявку"
@@ -31,7 +32,7 @@ export const FormPopup: FC = () => {
                     <h2 className="mt-4 xl:mt-0 text-xl xl:text-3xl font-bold mb-4">
                         Дякую за заявку!
                     </h2>
-                    <p className="mb-6">Скоро я обов'язково зв'яжусь з вами</p>
+                    <p className="mb-6">Скоро я обов&apos;язково зв&apos;яжусь з вами</p>
                     <p className="mb-2 font-bold">Ваша заявка №34</p>
                     <p className="mb-1 font-bold">Свистулька Жанна Олегівна</p>
                     <p className="font-semibold">+38 098 666-22-99</p>
