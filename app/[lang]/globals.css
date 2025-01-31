@@ -51,8 +51,16 @@ body {
     }
 
     .hero-bg-svg {
+        position: relative;
+    }
+    .hero-bg-svg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background: url('../../public/bg/bg_1.svg'), url('../../public/bg/stroke_1.svg');
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         background-repeat: no-repeat;
         background-size:
             2000px 1010px,
@@ -60,9 +68,12 @@ body {
         background-position:
             top -100px left -70px,
             top -100px left -80px;
+        z-index: 0;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 
     .main-bg-svg {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         background: url('../../public/bg/bg_2.svg'), url('../../public/bg/stroke_2.svg'),
             url('../../public/bg/stroke_3.svg'), url('../../public/bg/bg_3.svg'),
             url('../../public/bg/bg_4.svg'), url('../../public/bg/stroke_4.svg'),
@@ -92,6 +103,13 @@ body {
             bottom 500px left -70px,
             bottom 500px left -80px;
     }
+
+    .popup-bg-svg {
+        background:
+            url('../../public/bg/popup_bg.svg') no-repeat top -120px left 0px,
+            white;
+        background-size: 892px 994px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -119,16 +137,13 @@ body {
         z-index: 10px;
     }
 
-    .hero-bg-svg {
-        background: url('../../public/bg/bg_1.svg'), url('../../public/bg/stroke_1.svg');
-        background-repeat: no-repeat;
+    .hero-bg-svg::before {
         background-size:
-            2000px 1010px,
-            2020px 1060px;
+            2000px 910px,
+            2020px 960px;
         background-position:
-            top -270px left -70px,
-            top -280px left -80px;
-        z-index: 0;
+            top -180px left -70px,
+            top -180px left -80px;
     }
 
     .clip-angled {
@@ -211,10 +226,13 @@ body {
         background-position: top 105px right 250px;
     }
 
-    .hero-bg-svg {
+    .hero-bg-svg::before {
+        background-size:
+            2000px 1010px,
+            2020px 1060px;
         background-position:
             top -100px left -70px,
-            top -100px left -20px;
+            top -100px left -80px;
     }
 
     .clip-angled {

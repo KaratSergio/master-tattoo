@@ -7,6 +7,9 @@ import { gql } from '@apollo/client';
 import Header from '@/page-components/Header';
 import Footer from '@/page-components/Footer';
 
+import { PopupProvider } from '@/components/popup/PopupProvider';
+import { FormPopup } from '@/components/popup/FormPopup';
+
 export async function generateMetadata({
     params,
 }: {
@@ -162,16 +165,19 @@ export default async function RootLayout({
 
     return (
         <html lang={lang} className="h-full">
-            <body className={`hero-bg-svg ${montserrat.className} ${roboto_mono.variable}`}>
-                <Header
-                    lang={lang}
-                    navData={data.navMenu}
-                    headerData={data.header}
-                    social={data.footer.social}
-                />
-                {children}
-                <Footer data={data.footer} />
-            </body>
+            <PopupProvider>
+                <body className={`hero-bg-svg ${montserrat.className} ${roboto_mono.variable}`}>
+                    <Header
+                        lang={lang}
+                        navData={data.navMenu}
+                        headerData={data.header}
+                        social={data.footer.social}
+                    />
+                    {children}
+                    <Footer data={data.footer} />
+                </body>
+                <FormPopup />
+            </PopupProvider>
         </html>
     );
 }

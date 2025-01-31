@@ -33,6 +33,7 @@ const ProfileSection: FC<ProfileSectionProps> = ({ data }) => {
                         <H2 variant="title-section">{data.title}</H2>
                         <Markdown className="mt-4 text-[15px]" text={data.text} />
                         <Button
+                            popupType="contact"
                             iconEnabled={false}
                             className="mt-10 pl-6 justify-center xl:max-w-fit"
                         >

@@ -24,6 +24,7 @@ const Footer: FC<FooterProps> = ({ data }) => {
                     </div>
                 </div>
                 <Button
+                    popupType="contact"
                     variant="sky-white"
                     className="my-10 xl:my-0 justify-center pl-5 xl:px-10 xl:max-w-fit"
                 >

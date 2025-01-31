@@ -16,7 +16,7 @@ const Header: FC<NavMenuProps> = ({ headerData, navData, lang: initialLang, soci
     };
 
     return (
-        <header>
+        <header className="z-50">
             <div className="container pt-8 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <Link href="/">
@@ -64,7 +64,11 @@ const Header: FC<NavMenuProps> = ({ headerData, navData, lang: initialLang, soci
                         <p className="font-bold text-[20px]">{headerData.phone}</p>
                         <button className="text-15 text-deep_blue">{headerData.button1}</button>
                     </div>
-                    <Button iconEnabled={false} className="max-w-[200px] 2xl:max-w-[280px]">
+                    <Button
+                        popupType="contact"
+                        iconEnabled={false}
+                        className="max-w-[200px] 2xl:max-w-[280px]"
+                    >
                         {headerData.button2}
                     </Button>
                 </div>

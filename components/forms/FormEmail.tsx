@@ -46,7 +46,7 @@ export const FormEmail: FC<FormEmailProps> = ({ buttonText, buttonError, onSubmi
             </div>
 
             <Button
-                variant="deep-blue"
+                variant="primary"
                 iconEnabled={false}
                 type="submit"
                 className="w-full 2xl:w-[439px] mt-[10px]"

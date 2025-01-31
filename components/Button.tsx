@@ -1,12 +1,16 @@
+'use client';
+
 import cn from 'classnames';
 import { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from 'react';
 import { Check } from './icons/Check';
+import { usePopup } from '@/hooks/usePopup';
 
 export interface ButtonProps
     extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     children: ReactNode;
     variant?: 'primary' | 'sky-blue' | 'sky-white' | 'deep-blue';
     iconEnabled?: boolean;
+    popupType?: 'contact' | 'email';
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -14,8 +18,11 @@ export const Button: FC<ButtonProps> = ({
     children,
     className,
     iconEnabled = true,
+    popupType,
     ...props
 }) => {
+    const { openPopup } = usePopup();
+
     return (
         <button
             className={cn(
@@ -28,6 +35,7 @@ export const Button: FC<ButtonProps> = ({
                 },
                 className
             )}
+            onClick={() => popupType && openPopup(popupType)}
             {...props}
         >
             {iconEnabled && (

@@ -37,7 +37,10 @@ const HeroSection: FC<HeroSectionProps> = ({ data }) => {
                     <p className="hidden xl:block leading-5 text-[15px] 2xl:text-base 2xl:leading-6">
                         {data.text}
                     </p>
-                    <Button className="mt-[50px] xl:mt-[30px] 2xl:mt-[60px] xl:pl-[42px] max-w-fit">
+                    <Button
+                        popupType="contact"
+                        className="mt-[50px] xl:mt-[30px] 2xl:mt-[60px] xl:pl-[42px] max-w-fit"
+                    >
                         {data.button}
                     </Button>
                 </div>

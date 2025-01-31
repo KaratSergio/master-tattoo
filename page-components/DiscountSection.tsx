@@ -31,7 +31,11 @@ const DiscountSection: FC<DiscountSectionProps> = ({ data }) => {
                             </p>
                         </div>
                     </div>
-                    <Button variant="deep-blue" className="mt-[25px] xl:max-w-fit">
+                    <Button
+                        popupType="contact"
+                        variant="deep-blue"
+                        className="mt-[25px] xl:max-w-fit"
+                    >
                         {data.button}
                     </Button>
                     <Ellipse className="low-box-shadow rounded-full size-12 xl:size-[120px] text-white absolute top-[-28px] left-6" />
